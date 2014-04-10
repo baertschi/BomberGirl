@@ -1,9 +1,0 @@
-format 76
-
-classinstancecanvas 128130 classinstance_ref 128130 // Field[0]
-  xyz 358 86 2000
-end
-classinstancecanvas 128258 classinstance_ref 128258 // Bomb[0]
-  xyz 192 329 2000
-end
-end
