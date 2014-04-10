@@ -1,14 +1,14 @@
 #include "mainwindow.h"
-#include "ui_mainwindow.h"
 
-MainWindow::MainWindow(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::MainWindow)
+MainWindow::MainWindow()
 {
-    ui->setupUi(this);
+    setWindowTitle(tr("BomberGirl"));
 }
 
-MainWindow::~MainWindow()
+void MainWindow::paintEvent(QPaintEvent *)
 {
-    delete ui;
+    QPainter painter(this);
+    painter.setPen(QPen(QColor(255, 0, 0)));
+
+    painter.drawEllipse(200, 100, 100, 100);
 }
