@@ -13,7 +13,7 @@ public:
     Player();
 
     void die();
-    void walk();        // may have some input/output parameter
+    void walk();
     void placeBomb();
     void draw();
 };

@@ -5,7 +5,7 @@
 class Playground
 {
 public:
-    Field map[13][11];
+    Field *map[13][11];
     Playground();
 };
 
