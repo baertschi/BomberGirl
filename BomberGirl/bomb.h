@@ -1,5 +1,6 @@
 #ifndef BOMB_H
 #define BOMB_H
+#include "elapsing.h"
 
 class Bomb : public Elapsing
 {
