@@ -1,0 +1,13 @@
+window_sizes 1920 1018 271 1643 909 35
+diagrams
+  active  classdiagram_ref 128006 // Classes Derives
+    1706 909 190 4 29 0
+end
+show_stereotypes
+selected classrelation_ref 128514 // <generalisation>
+open
+  usecaseview_ref 128002 // Bomberman
+  class_ref 128774 // Fire
+  class_ref 129798 // Bomb
+end
+end

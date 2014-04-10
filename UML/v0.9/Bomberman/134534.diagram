@@ -1,0 +1,15 @@
+format 76
+
+textcanvas 128006 "Zustand nach Spielstart (keine Bombe, kein Feuer, keine Items)"
+  xyzwh 37 41 2000 302 14
+textcanvas 128134 " 	Ein Spieler hat eine Bombe gelegt"
+  xyzwh 34 219 2000 165 14
+textcanvas 128262 "Eine Bombe ist am explodieren"
+  xyzwh 28 372 2000 146 14
+classinstancecanvas 128390 classinstance_ref 128006 // Player_1
+  xyz 43 109 2000
+end
+classinstancecanvas 128518 classinstance_ref 128134 // Player_2
+  xyz 139 108 2000
+end
+end

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Bouml (http://bouml.free.fr/) -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="446" height="447" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<g>
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="430" y="90" width="3" height="69" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="362" y="156" width="71" height="3" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="358" y="86" width="72" height="70" />
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" text-decoration="underline" text-anchor="middle" x="394" y="99">Field[0]:Field</text>
+	<line stroke="black" stroke-opacity="1" x1="358" y1="106" x2="430" y2="106" />
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="362" y="119">Image = none</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="362" y="135">x = 3</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="362" y="151">y = 37</text>
+</g>
+<g>
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="294" y="333" width="3" height="101" />
+	<rect fill="#808080" stroke="none" stroke-opacity="1" x="196" y="431" width="101" height="3" />
+	<rect fill="#ffffc0" stroke="black" stroke-width="1" stroke-opacity="1" x="192" y="329" width="102" height="102" />
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" text-decoration="underline" text-anchor="middle" x="243" y="342">Bomb[0]:Bomb</text>
+	<line stroke="black" stroke-opacity="1" x1="192" y1="349" x2="294" y2="349" />
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="196" y="362">Image = BombImage</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="196" y="378">fireSize = 4</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="196" y="394">maxCountdown = 3</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="196" y="410">x = 6</text>
+	<text font-family="Helvetica" font-size="10" fill="#000000" xml:space="preserve" x="196" y="426">y = 10</text>
+</g>
+</svg>

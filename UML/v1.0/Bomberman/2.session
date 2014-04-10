@@ -1,0 +1,18 @@
+window_sizes 1920 1018 271 1643 909 35
+diagrams
+  active  classdiagram_ref 128006 // Classes Derives
+    1706 909 160 4 36 0
+  sequencediagram_ref 141058 // Seq.-Diag. Bombe
+    1643 909 130 18 0 0
+end
+show_stereotypes
+selected operation_ref 155522 // detach
+open
+  usecaseview_ref 128002 // Bomberman
+  class_ref 128006 // Field
+  class_ref 128646 // Ground
+  class_ref 129798 // Bomb
+  class_ref 147714 // FieldContent
+  class_ref 147842 // Timer
+end
+end
