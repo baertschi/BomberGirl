@@ -5,6 +5,7 @@ class BombItem : public Item
 {
 public:
     BombItem();
+    enum onStepReturnArgument onStep();
 };
 
 #endif // BOMBITEM_H

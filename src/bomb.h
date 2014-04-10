@@ -4,8 +4,11 @@
 
 class Bomb : public Elapsing
 {
+private:
+    int fireSize;
+    int *pBombCounter;
 public:
-    Bomb();
+    Bomb(int _fireSize, int *_pBombCounter);
 };
 
 #endif // BOMB_H

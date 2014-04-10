@@ -1,5 +1,7 @@
 #include "bomb.h"
 
-Bomb::Bomb()
+Bomb::Bomb(int _fireSize, int *_pBombCounter)
 {
+    fireSize = _fireSize;
+    pBombCounter = _pBombCounter;
 }
