@@ -1,6 +1,6 @@
 #ifndef ENDFIRE_H
 #define ENDFIRE_H
-
+#include "fire.h"
 class EndFire : public Fire
 {
 public:
