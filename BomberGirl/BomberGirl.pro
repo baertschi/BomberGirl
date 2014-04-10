@@ -13,8 +13,40 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    playground.cpp \
+    player.cpp \
+    field.cpp \
+    wall.cpp \
+    ground.cpp \
+    fieldcontent.cpp \
+    brick.cpp \
+    elapsing.cpp \
+    item.cpp \
+    bomb.cpp \
+    fire.cpp \
+    flashitem.cpp \
+    bombitem.cpp \
+    corefire.cpp \
+    extensionfire.cpp \
+    endfire.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    playground.h \
+    player.h \
+    field.h \
+    wall.h \
+    ground.h \
+    fieldcontent.h \
+    brick.h \
+    elapsing.h \
+    item.h \
+    bomb.h \
+    fire.h \
+    flashitem.h \
+    bombitem.h \
+    corefire.h \
+    extensionfire.h \
+    endfire.h
 
 FORMS    += mainwindow.ui
