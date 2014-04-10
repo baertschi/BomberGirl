@@ -2,10 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-
-namespace Ui {
-class MainWindow;
-}
+#include <QPen>
+#include <QPainter>
+#include <QWidget>
 
 class MainWindow : public QWidget
 {
@@ -14,6 +13,11 @@ class MainWindow : public QWidget
 public:
     MainWindow();
 
+protected:
+     void paintEvent(QPaintEvent *);
+
+private:
+     QPen pen;
 };
 
 #endif // MAINWINDOW_H
