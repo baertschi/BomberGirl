@@ -1,4 +1,5 @@
 #include "mainwindow.h"
+#include "playground.h"
 
 MainWindow::MainWindow()
 {
@@ -11,4 +12,6 @@ void MainWindow::paintEvent(QPaintEvent *)
     painter.setPen(QPen(QColor(255, 0, 0)));
 
     painter.drawEllipse(200, 100, 100, 100);
+
+    Playground thePlayground = Playground();
 }

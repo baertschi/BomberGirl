@@ -2,22 +2,31 @@
 #define FIELD_H
 #include <QImage>
 
-enum onStepReturnArgument {
+enum onStepArgument {
     NOENTRY,
     ENTRY,
     UPGRADEFLASH,
     UPGRADEBOMBS,
     DIE
 };
+enum onBurnArgument {
+    NOACTION,
+    HARDBLOCK,
+    BLOCK,
+    BURN,
+    TRIGGER
+};
 
 class Field
 {
+protected:
     int x, y;
     QImage image;
 public:
     Field();
-    enum onStepReturnArgument onStep();
-    int onBurn();
+    Field(int _x, int _y);
+    virtual enum onStepArgument onStep() = 0;
+    virtual enum onBurnArgument onBurn() = 0;
     void draw();
 };
 

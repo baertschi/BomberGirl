@@ -5,6 +5,7 @@ class FieldContent : public Field
 {
 public:
     FieldContent();
+
 };
 
 #endif // FIELDCONTENT_H
