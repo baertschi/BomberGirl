@@ -1,6 +1,6 @@
 #ifndef FIELD_H
 #define FIELD_H
-#include <QImage>
+#include <QPixmap>
 
 enum onStepArgument {
     NOENTRY,
@@ -21,13 +21,12 @@ class Field
 {
 protected:
     int x, y;
-    QImage image;
 public:
     Field();
     Field(int _x, int _y);
     virtual enum onStepArgument onStep() = 0;
     virtual enum onBurnArgument onBurn() = 0;
-    void draw();
+    QPixmap* image;
 };
 
 #endif // FIELD_H

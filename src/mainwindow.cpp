@@ -4,7 +4,7 @@
 
 MainWindow::MainWindow()
 {
-    setWindowTitle(tr("BomberGirl"));
+    setWindowTitle("BomberGirl");
 
     blockSize = DEFAULT_BLOCK_SIZE;
     resize(blockSize*13, blockSize*11);
@@ -19,6 +19,7 @@ MainWindow::MainWindow()
 void MainWindow::paintEvent(QPaintEvent *)
 {
     QPainter painter(this);
+    /*
     painter.drawPixmap(0*blockSize, 0, blockSize, blockSize, *groundImage);
     painter.drawPixmap(1*blockSize, 0, blockSize, blockSize, *groundImage);
     painter.drawPixmap(2*blockSize, 0, blockSize, blockSize, *wallImage);
@@ -27,8 +28,14 @@ void MainWindow::paintEvent(QPaintEvent *)
 
     painter.drawPixmap(1*blockSize, 0, blockSize, blockSize, *bombImage);
     //painter.drawPixmap(4*blockSize, 0, blockSize, blockSize, *player1Image);
-
-    Playground thePlayground = Playground();
+*/
+    for(int x = 0; x < 13; x++)
+    {
+        for(int y = 0; y < 11; y++)
+        {
+            painter.drawPixmap(blockSize*x, blockSize*y, blockSize, blockSize, *thePlayground.map[x][y]->image);
+        }
+    }
 }
 
 void MainWindow::resizeEvent(QResizeEvent *event)

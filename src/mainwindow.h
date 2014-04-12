@@ -6,6 +6,7 @@
 #include <QPainter>
 #include <QWidget>
 #include <QResizeEvent>
+#include "playground.h"
 
 #define DEFAULT_BLOCK_SIZE 48
 #define MINIMUM_BLOCK_SIZE 16
@@ -29,6 +30,8 @@ private:
      QPixmap* brickImage;
 
      int blockSize;
+
+     Playground thePlayground;
 };
 
 #endif // MAINWINDOW_H

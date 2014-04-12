@@ -7,7 +7,7 @@ Wall::Wall(){
 Wall::Wall(int _x, int _y){
     x = _x;
     y = _y;
-   // image.load("wall.jpg");     // wall.jpg does not exist, this may cause errors
+    image = new QPixmap(":/wall.png");
     std::cout << "wall " << x << "  " << y << "\n";
 }
 onBurnArgument Wall::onBurn(){

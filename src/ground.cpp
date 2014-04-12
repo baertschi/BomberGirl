@@ -7,7 +7,8 @@ Ground::Ground()
 Ground::Ground(int _x, int _y){
     x = _x;
     y = _y;
-   // image.load("ground.jpg");
+    image = new QPixmap();
+    std::cout << image->load(":/ground.png");
     std::cout << "ground-field " << x << "  " << y << "\n";
 }
 onStepArgument Ground::onStep(){

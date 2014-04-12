@@ -6,7 +6,7 @@ BombItem::BombItem()
 BombItem::BombItem(int _x, int _y){
     x = _x;
     y = _y;
-    image.load("BombItem");
+    image = new QPixmap(":/bomb.png");
 }
 
 onStepArgument BombItem::onStep(){

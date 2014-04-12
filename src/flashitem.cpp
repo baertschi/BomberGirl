@@ -6,7 +6,7 @@ FlashItem::FlashItem()
 FlashItem::FlashItem(int _x, int _y){
     x = _x;
     y = _y;
-    image.load("flashItem");
+    image = new QPixmap(":/flashItem.png");
 }
 onStepArgument FlashItem::onStep(){
     return UPGRADEFLASH;
