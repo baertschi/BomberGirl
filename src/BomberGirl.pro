@@ -53,3 +53,5 @@ FORMS    += mainwindow.ui
 
 RESOURCES += \
     ../ressources.qrc
+
+QMAKE_RESOURCE_FLAGS += -no-compress

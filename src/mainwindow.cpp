@@ -6,22 +6,41 @@ MainWindow::MainWindow()
 {
     setWindowTitle(tr("BomberGirl"));
 
-    groundImage = new QPixmap();
-    bombImage = new QPixmap();
+    blockSize = DEFAULT_BLOCK_SIZE;
+    resize(blockSize*13, blockSize*11);
 
-    std::cout << groundImage->load(":/ground.png") << std::endl;
-    std::cout <<   bombImage->load(":/bomb.png")   << std::endl;
+    // load images from built-in ressource
+    groundImage = new QPixmap(":/ground.png");
+    bombImage = new QPixmap(":/bomb.png");
+    wallImage = new QPixmap(":/wall.png");
+    brickImage = new QPixmap(":/brick.png");
 }
 
 void MainWindow::paintEvent(QPaintEvent *)
 {
     QPainter painter(this);
-    painter.setPen(QPen(QColor(255, 0, 0)));
+    painter.drawPixmap(0*blockSize, 0, blockSize, blockSize, *groundImage);
+    painter.drawPixmap(1*blockSize, 0, blockSize, blockSize, *groundImage);
+    painter.drawPixmap(2*blockSize, 0, blockSize, blockSize, *wallImage);
+    painter.drawPixmap(3*blockSize, 0, blockSize, blockSize, *brickImage);
+    painter.drawPixmap(4*blockSize, 0, blockSize, blockSize, *groundImage);
 
-    painter.drawEllipse(200, 100, 100, 100);
-    painter.drawPixmap(50, 50, *groundImage);
-    painter.drawPixmap(50+48, 50, *groundImage);
-    painter.drawPixmap(50+48, 50, *bombImage);
+    painter.drawPixmap(1*blockSize, 0, blockSize, blockSize, *bombImage);
+    //painter.drawPixmap(4*blockSize, 0, blockSize, blockSize, *player1Image);
 
-    //Playground thePlayground = Playground();
+    Playground thePlayground = Playground();
+}
+
+void MainWindow::resizeEvent(QResizeEvent *event)
+{
+    // gets called every time the window is resized.
+    // Window width is kept as it is, but the height is being scaled accordingly.
+    if((float)event->size().width() / (float)event->size().height() != 13.0 / 11.0)
+    {
+        // if aspect ratio isn't proportional to 13*11, change.
+        blockSize = event->size().width()/13.0;
+        if(blockSize < MINIMUM_BLOCK_SIZE)
+            blockSize = 16;
+        resize(blockSize*13, blockSize*11);
+    }
 }

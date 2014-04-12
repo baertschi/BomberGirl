@@ -5,6 +5,10 @@
 #include <QPen>
 #include <QPainter>
 #include <QWidget>
+#include <QResizeEvent>
+
+#define DEFAULT_BLOCK_SIZE 48
+#define MINIMUM_BLOCK_SIZE 16
 
 class MainWindow : public QWidget
 {
@@ -12,6 +16,7 @@ class MainWindow : public QWidget
 
 public:
     MainWindow();
+    void resizeEvent(QResizeEvent *event);
 
 protected:
      void paintEvent(QPaintEvent *);
@@ -20,6 +25,10 @@ private:
      QPen pen;
      QPixmap* groundImage;
      QPixmap* bombImage;
+     QPixmap* wallImage;
+     QPixmap* brickImage;
+
+     int blockSize;
 };
 
 #endif // MAINWINDOW_H
