@@ -50,3 +50,6 @@ HEADERS  += mainwindow.h \
     endfire.h
 
 FORMS    += mainwindow.ui
+
+RESOURCES += \
+    ../ressources.qrc
