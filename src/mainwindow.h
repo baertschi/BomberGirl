@@ -18,6 +18,8 @@ protected:
 
 private:
      QPen pen;
+     QPixmap* groundImage;
+     QPixmap* bombImage;
 };
 
 #endif // MAINWINDOW_H
