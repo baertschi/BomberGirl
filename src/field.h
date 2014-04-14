@@ -1,6 +1,7 @@
 #ifndef FIELD_H
 #define FIELD_H
 #include <QPixmap>
+#include "field.h"
 
 enum imageEnum {
 groundImage, bombImage, wallImage, brickImage,

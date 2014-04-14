@@ -4,5 +4,7 @@
         <file alias="brick.png">img/brick.png</file>
         <file alias="ground.png">img/ground.png</file>
         <file alias="wall.png">img/wall.png</file>
+        <file alias="player1.png">img/player1.png</file>
+        <file alias="player2.png">img/player2.png</file>
     </qresource>
 </RCC>

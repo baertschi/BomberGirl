@@ -5,13 +5,17 @@
 #include "field.h"
 #include "wall.h"
 #include "ground.h"
+#include "player.h"
+
+typedef std::vector< std::vector< Field* > > mapMatrix;
 
 class Playground
 {
 public:
-    std::vector< std::vector< Field* > > map;
-    //Field *map[13][11];
     Playground();
+
+    mapMatrix map;
+    Player player1, player2;
 };
 
 #endif // PLAYGROUND_H

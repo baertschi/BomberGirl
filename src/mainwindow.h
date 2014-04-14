@@ -17,10 +17,11 @@ class MainWindow : public QWidget
 
 public:
     MainWindow();
-    void resizeEvent(QResizeEvent *event);
 
 protected:
      void paintEvent(QPaintEvent *);
+     void resizeEvent(QResizeEvent *event);
+     void keyPressEvent(QKeyEvent *event);
 
 private:
      QPen pen;

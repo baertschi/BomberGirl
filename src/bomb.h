@@ -9,6 +9,8 @@ private:
     int *pBombCounter;
 public:
     Bomb(int _fireSize, int *_pBombCounter);
+    onStepArgument onStep();
+    onBurnArgument onBurn();
 };
 
 #endif // BOMB_H

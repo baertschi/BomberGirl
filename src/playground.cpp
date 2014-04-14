@@ -5,7 +5,7 @@ Playground::Playground()
     // With normal C-style array, the map isn't automatically
     // initialized to NULL pointers. --> therefore using the
     // STL vector class for this (initialization given as last argument).
-    map = std::vector< std::vector< Field* > > ( 13, std::vector<Field*> ( 11, (Field*)NULL ) );
+    map = mapMatrix ( 13, std::vector<Field*> ( 11, (Field*)NULL ) );
 
     // Initialize Map (Position [0, 0] is set to top left corner)
     for(int i = 1; i < 13; i+=2){
@@ -34,4 +34,13 @@ Playground::Playground()
            }
         }
     }
+
+    // Initialize the two players
+    player1.image = player1Image;
+    player1.x = 0;
+    player1.y = 0;
+
+    player2.image = player2Image;
+    player2.x = 12;
+    player2.y = 10;
 }
