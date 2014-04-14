@@ -1,13 +1,16 @@
 #ifndef PLAYGROUND_H
 #define PLAYGROUND_H
-#include "field.h"
+
 #include <vector>
+#include "field.h"
+#include "wall.h"
+#include "ground.h"
 
 class Playground
 {
 public:
-    //std::vector< std::vector< *Field > > map;
-    Field *map[13][11];
+    std::vector< std::vector< Field* > > map;
+    //Field *map[13][11];
     Playground();
 };
 

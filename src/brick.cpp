@@ -6,7 +6,7 @@ Brick::Brick()
 Brick::Brick(int _x, int _y){
     x = _x;
     y = _y;
-    image = new QPixmap(":/brick.png");
+    image = brickImage;
 }
 onBurnArgument Brick::onBurn(){
     return BLOCK;

@@ -7,7 +7,7 @@ Wall::Wall(){
 Wall::Wall(int _x, int _y){
     x = _x;
     y = _y;
-    image = new QPixmap(":/wall.png");
+    image = wallImage;
     std::cout << "wall " << x << "  " << y << "\n";
 }
 onBurnArgument Wall::onBurn(){

@@ -24,10 +24,7 @@ protected:
 
 private:
      QPen pen;
-     QPixmap* groundImage;
-     QPixmap* bombImage;
-     QPixmap* wallImage;
-     QPixmap* brickImage;
+     QPixmap* images[11];
 
      int blockSize;
 

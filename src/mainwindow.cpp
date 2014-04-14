@@ -1,5 +1,4 @@
 #include "mainwindow.h"
-#include "playground.h"
 #include <iostream>
 
 MainWindow::MainWindow()
@@ -10,30 +9,32 @@ MainWindow::MainWindow()
     resize(blockSize*13, blockSize*11);
 
     // load images from built-in ressource
-    groundImage = new QPixmap(":/ground.png");
-    bombImage = new QPixmap(":/bomb.png");
-    wallImage = new QPixmap(":/wall.png");
-    brickImage = new QPixmap(":/brick.png");
+    images[groundImage] = new QPixmap(":/ground.png");
+    images[bombImage] = new QPixmap(":/bomb.png");
+    images[wallImage] = new QPixmap(":/wall.png");
+    images[brickImage] = new QPixmap(":/brick.png");
+    /*
+    images[bombItemImage] = new QPixmap(":/bombItem.png");
+    images[flashItemImage] = new QPixmap(":/flashItem.png");
+
+    images[coreFireImage] = new QPixmap(":/coreFire.png");
+    images[extensionFireImage] = new QPixmap(":/extensionFire.png");
+    images[endFireImage] = new QPixmap(":/endFire.png");
+
+    images[player1Image] = new QPixmap(":/player1.png");
+    images[player2Image] = new QPixmap(":/player2.png");
+    */
 }
 
 void MainWindow::paintEvent(QPaintEvent *)
 {
     QPainter painter(this);
-    /*
-    painter.drawPixmap(0*blockSize, 0, blockSize, blockSize, *groundImage);
-    painter.drawPixmap(1*blockSize, 0, blockSize, blockSize, *groundImage);
-    painter.drawPixmap(2*blockSize, 0, blockSize, blockSize, *wallImage);
-    painter.drawPixmap(3*blockSize, 0, blockSize, blockSize, *brickImage);
-    painter.drawPixmap(4*blockSize, 0, blockSize, blockSize, *groundImage);
 
-    painter.drawPixmap(1*blockSize, 0, blockSize, blockSize, *bombImage);
-    //painter.drawPixmap(4*blockSize, 0, blockSize, blockSize, *player1Image);
-*/
     for(int x = 0; x < 13; x++)
     {
         for(int y = 0; y < 11; y++)
         {
-            painter.drawPixmap(blockSize*x, blockSize*y, blockSize, blockSize, *thePlayground.map[x][y]->image);
+            painter.drawPixmap(blockSize*x, blockSize*y, blockSize, blockSize, *images[thePlayground.map[x][y]->image]);
         }
     }
 }

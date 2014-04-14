@@ -1,19 +1,11 @@
 #include "playground.h"
-#include "wall.h"
-#include "ground.h"
-
 
 Playground::Playground()
 {
-    // first initialize the map to NULL pointers. This isn't done
-    // automatically! --> Maybe consider std::array<Field> for this?
-    //map( 13, std::vector<*Field> ( 11, 0 ) );
-
-    for (int x = 0; x < 13; ++x) {
-        for (int y = 0; y < 11; ++y) {
-            map[x][y] = NULL;
-        }
-    }
+    // With normal C-style array, the map isn't automatically
+    // initialized to NULL pointers. --> therefore using the
+    // STL vector class for this (initialization given as last argument).
+    map = std::vector< std::vector< Field* > > ( 13, std::vector<Field*> ( 11, (Field*)NULL ) );
 
     // Initialize Map (Position [0, 0] is set to top left corner)
     for(int i = 1; i < 13; i+=2){

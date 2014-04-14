@@ -1,13 +1,12 @@
 #ifndef PLAYER_H
 #define PLAYER_H
-#include <QImage>
+#include "mainwindow.h"
 
 class Player
 {
 private:
     int bombCounter, maxBomb, fireSize;
     int x, y;
-    QImage image;
 
 public:
     Player();
@@ -16,6 +15,8 @@ public:
     void walk();
     void placeBomb();
     void draw();
+
+    imageEnum image;
 };
 
 #endif // PLAYER_H

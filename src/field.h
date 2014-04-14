@@ -2,6 +2,12 @@
 #define FIELD_H
 #include <QPixmap>
 
+enum imageEnum {
+groundImage, bombImage, wallImage, brickImage,
+bombItemImage, flashItemImage, coreFireImage,
+extensionFireImage,endFireImage, player1Image, player2Image
+};
+
 enum onStepArgument {
     NOENTRY,
     ENTRY,
@@ -26,7 +32,7 @@ public:
     Field(int _x, int _y);
     virtual enum onStepArgument onStep() = 0;
     virtual enum onBurnArgument onBurn() = 0;
-    QPixmap* image;
+    imageEnum image;
 };
 
 #endif // FIELD_H
