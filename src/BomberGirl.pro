@@ -29,7 +29,8 @@ SOURCES += main.cpp\
     bombitem.cpp \
     corefire.cpp \
     extensionfire.cpp \
-    endfire.cpp
+    endfire.cpp \
+    mytimer.cpp
 
 HEADERS  += mainwindow.h \
     playground.h \
@@ -47,7 +48,8 @@ HEADERS  += mainwindow.h \
     bombitem.h \
     corefire.h \
     extensionfire.h \
-    endfire.h
+    endfire.h \
+    mytimer.h
 
 FORMS    += mainwindow.ui
 
