@@ -24,7 +24,6 @@ protected:
      void keyPressEvent(QKeyEvent *event);
 
 private:
-     QPen pen;
      QPixmap* images[11];
 
      int blockSize;

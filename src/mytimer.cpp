@@ -3,11 +3,11 @@
 MyTimer::MyTimer(QObject *parent) :
     QTimer(parent)
 {
-    connect(this, SIGNAL(timeout()), this, SLOT(tickManager()));
+    connect(this, SIGNAL(timeout()), this, SLOT(masterTick()));
     start(100);
 }
 
-void MyTimer::tickManager()
+void MyTimer::masterTick()
 {
     // go through list and tick all elapsing objects there
 }
