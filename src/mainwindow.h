@@ -22,6 +22,7 @@ protected:
      void paintEvent(QPaintEvent *);
      void resizeEvent(QResizeEvent *event);
      void keyPressEvent(QKeyEvent *event);
+//     void keyReleaseEvent(QKeyEvent *event);
 
 private:
      QPixmap* images[11];

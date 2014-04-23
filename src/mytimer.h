@@ -15,7 +15,7 @@ public:
     void detach(Elapsing &observer);
 
 private:
-    std::list< *Elapsing > elapsingList;
+//    std::list< *Elapsing > elapsingList;
 
 signals:
 

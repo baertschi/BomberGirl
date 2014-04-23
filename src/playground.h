@@ -6,6 +6,10 @@
 #include "wall.h"
 #include "ground.h"
 #include "player.h"
+#include "bombitem.h"
+#include "bomb.h"
+#include "flashitem.h"
+#include "brick.h"
 
 typedef std::vector< std::vector< Field* > > mapMatrix;
 

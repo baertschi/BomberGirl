@@ -61,9 +61,14 @@ void MainWindow::resizeEvent(QResizeEvent *event)
         resize(blockSize*13, blockSize*11);
     }
 }
+/*void MainWindow::keyReleaseEvent(QKeyEvent *event)
+{
+    std::cout << "released: " << event->text().toStdString() << std::endl;
+}*/
 
 void MainWindow::keyPressEvent(QKeyEvent *event)
 {
+    //std::cout << "Key: " << event->text().toStdString() << std::endl;
     switch(event->key()) {
     case Qt::Key_A:
         thePlayground.player1.walk(LEFT, thePlayground.map);
@@ -80,6 +85,7 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
     case Qt::Key_Tab:
         thePlayground.player1.placeBomb(thePlayground.map);
         break;
+
 
     case Qt::Key_Left:
         thePlayground.player2.walk(LEFT, thePlayground.map);

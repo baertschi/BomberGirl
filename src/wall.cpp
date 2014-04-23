@@ -8,7 +8,7 @@ Wall::Wall(int _x, int _y){
     x = _x;
     y = _y;
     image = wallImage;
-    std::cout << "wall " << x << "  " << y << "\n";
+    //std::cout << "wall " << x << "  " << y << "\n";
 }
 onBurnArgument Wall::onBurn(){
 

@@ -1,4 +1,5 @@
 #include "playground.h"
+#include <QTime>
 
 Playground::Playground()
 {
@@ -26,11 +27,37 @@ Playground::Playground()
     }
 
     // Place Items, Bricks and remaining Ground Fields
+    int brickCnt = 0, itemCnt = 0;
+    // init seed value for random number generator
+    qsrand(QTime::currentTime().msec());
+    //qsrand(qrand());
     for(int i = 0; i < 13; i++){
         for(int j = 0; j < 11; j ++){
            if(map[i][j] == NULL){
                // TODO: place random Fields
-               map[i][j] = new Ground(i, j);
+               // place Brick or Ground
+               if(qrand()%100 < 70 && brickCnt < 73){
+                   // place Item or Brick
+                   if(qrand()%100 < 40 && itemCnt < 30){
+                       // place BombItem or FlashItem
+                       if(qrand()%100 < 50){
+                           map[i][j] =new Brick(i, j);// new BombItem(i, j);// new Ground(i, j, new BombItem(i, j));
+                       }
+                       else{
+                           map[i][j] = new Brick(i, j);//new FlashItem(i, j);//new Ground(i, j, new FlashItem(i, j));
+                       }
+                       itemCnt++;
+                   }
+                   else{
+                       map[i][j] = new Brick(i, j); //new Ground(i, j, new Brick(i, j));
+                   }
+                   brickCnt++;
+               }
+               else{
+                   map[i][j] = new Ground(i, j);
+               }
+
+
            }
         }
     }
