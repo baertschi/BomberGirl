@@ -56,6 +56,10 @@ void MainWindow::paintEvent(QPaintEvent *)
             // draw item if there is any
             if(thePlayground.map[x][y]->image == groundImage){
                 pnt = static_cast<Ground *>(thePlayground.map[x][y]);
+                if(pnt->itemElement != NULL){
+                    pnt->itemElement->image;
+                     //painter.drawPixmap(blockSize*x, blockSize*y, blockSize, blockSize, *images[pnt->itemElement->image]);
+                }
             }
         }
     }

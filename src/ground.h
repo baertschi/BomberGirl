@@ -12,10 +12,7 @@
 class Ground : public Field
 {
 private:
-    Item *itemElement;
-    Fire *fireElement;
-    Bomb *bombElement;
-    Brick *brickElement;
+
 public:
     Ground();
     Ground(int _x, int _y);
@@ -26,6 +23,10 @@ public:
     onBurnArgument onBurn();
     void placeBomb();
 
+    Item *itemElement;
+    Fire *fireElement;
+    Bomb *bombElement;
+    Brick *brickElement;
 };
 
 #endif // GROUND_H

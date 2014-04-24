@@ -3,9 +3,14 @@
 
 Ground::Ground()
 {
+    itemElement = NULL;
+    fireElement = NULL;
+    bombElement = NULL;
+    brickElement = NULL;
 
 }
 Ground::Ground(int _x, int _y){
+    Ground();
     x = _x;
     y = _y;
     image = groundImage;
