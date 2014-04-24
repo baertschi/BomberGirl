@@ -8,6 +8,7 @@ public:
     BombItem(int _x, int _y);
     onStepArgument onStep();
     onBurnArgument onBurn();
+
 };
 
 #endif // BOMBITEM_H

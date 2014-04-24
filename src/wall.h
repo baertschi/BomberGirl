@@ -9,6 +9,7 @@ public:
     Wall(int _x, int _y);
     onBurnArgument onBurn();
     onStepArgument onStep();
+
 };
 
 #endif // WALL_H

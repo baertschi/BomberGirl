@@ -28,11 +28,13 @@ class Field
 {
 protected:
     int x, y;
+
 public:
     Field();
     Field(int _x, int _y);
     virtual enum onStepArgument onStep() = 0;
     virtual enum onBurnArgument onBurn() = 0;
+
     imageEnum image;
 };
 

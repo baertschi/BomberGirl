@@ -17,4 +17,3 @@ onStepArgument BombItem::onStep(){
 onBurnArgument BombItem::onBurn(){
     return NOACTION;
 }
-

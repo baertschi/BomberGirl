@@ -14,3 +14,4 @@ onStepArgument FlashItem::onStep(){
 onBurnArgument FlashItem::onBurn(){
     return NOACTION;
 }
+

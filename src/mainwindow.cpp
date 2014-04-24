@@ -21,9 +21,20 @@ MainWindow::MainWindow()
     images[flashItemImage] = new QPixmap(":/flashItem.png");
 
     images[coreFireImage] = new QPixmap(":/coreFire.png");
-    images[extensionFireImage] = new QPixmap(":/extensionFire.png");
+    images[extensionFireImage ] = new QPixmap(":/extensionFire.png");
     images[endFireImage] = new QPixmap(":/endFire.png");
     */
+    ////////////////////////////////////////////////////////////////////////
+    // For Debuging
+    ////////////////////////////////////////////////////////////////////////
+    images[bombItemImage] = new QPixmap(":/brick.png");
+    images[flashItemImage] = new QPixmap(":/brick.png");
+
+    images[coreFireImage] = new QPixmap(":/brick.png");
+    images[extensionFireImage ] = new QPixmap(":/brick.png");
+    images[endFireImage] = new QPixmap(":/brick.png");
+
+    ////////////////////////////////////////////////////////////////////////
     images[player1Image] = new QPixmap(":/player1.png");
     images[player2Image] = new QPixmap(":/player2.png");
 }
@@ -33,11 +44,19 @@ void MainWindow::paintEvent(QPaintEvent *)
     QPainter painter(this);
 
     // draw the basic map
+    Ground *pnt;
     for(int x = 0; x < 13; x++)
     {
         for(int y = 0; y < 11; y++)
         {
+
+            // ground zeichnen, player zeichnen, brick zeichnen
+            // draw groudn field
             painter.drawPixmap(blockSize*x, blockSize*y, blockSize, blockSize, *images[thePlayground.map[x][y]->image]);
+            // draw item if there is any
+            if(thePlayground.map[x][y]->image == groundImage){
+                pnt = static_cast<Ground *>(thePlayground.map[x][y]);
+            }
         }
     }
 

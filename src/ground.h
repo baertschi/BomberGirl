@@ -6,12 +6,16 @@
 #include "bomb.h"
 #include "flashitem.h"
 #include "brick.h"
+#include "fire.h"
 #include "playground.h"
 
 class Ground : public Field
 {
 private:
-    FieldContent *fieldContents[4];
+    Item *itemElement;
+    Fire *fireElement;
+    Bomb *bombElement;
+    Brick *brickElement;
 public:
     Ground();
     Ground(int _x, int _y);
