@@ -38,6 +38,9 @@ MainWindow::MainWindow()
     images[player1Image] = new QPixmap(":/player1.png");
     images[player2Image] = new QPixmap(":/player2.png");
 
+    // Enabele Master Tick
+    tick = new MyTimer(this);
+
 }
 
 void MainWindow::paintEvent(QPaintEvent *)
@@ -53,9 +56,19 @@ void MainWindow::paintEvent(QPaintEvent *)
 
             // ground zeichnen, player zeichnen, brick zeichnen
             // draw groudn field
+
+
             painter.drawPixmap(blockSize*x, blockSize*y, blockSize, blockSize, *images[thePlayground.map[x][y]->image]);
 
             // draw item if there is any
+//            if(thePlayground.map[x][y]->image == groundImage){
+//                 pnt = static_cast<Ground *>(thePlayground.map[x][y]);
+//                  if(pnt->brickElement != NULL){
+//                     painter.drawPixmap(blockSize*x, blockSize*y, blockSize, blockSize, *images[brickImage]);
+
+//                  }
+//            }
+
 
         }
     }

@@ -3,6 +3,7 @@
 #include "field.h"
 #include "bomb.h"
 
+
 enum directionEnum {LEFT, RIGHT, UP, DOWN};
 
 typedef std::vector< std::vector< Field* > > mapMatrix;

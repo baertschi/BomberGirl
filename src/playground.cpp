@@ -18,7 +18,7 @@ Playground::Playground()
     // Set Ground Field in each Corner
     map[0][0] = new Ground(0, 0);
     map[12][10] = new Ground(12, 10);
-    for(int i = 1; i < 4; i++){
+    for(int i = 1; i < 3; i++){
         int j = 0;
           map[i][j] = new Ground(i, j);
           map[j][i] = new Ground(j, i);
@@ -41,15 +41,15 @@ Playground::Playground()
                    if(qrand()%100 < 40 && itemCnt < 30){
                        // place BombItem or FlashItem
                        if(qrand()%100 < 50){
-                           map[i][j] = new Ground(i, j, new BombItem(i, j));
+                           map[i][j] =new Brick(i, j); // new Ground(i, j, new BombItem(i, j));
                        }
                        else{
-                           map[i][j] = new Ground(i, j, new FlashItem(i, j));
+                           map[i][j] = new Brick(i, j); //new Ground(i, j, new FlashItem(i, j));
                        }
                        itemCnt++;
                    }
                    else{
-                       map[i][j] = new Ground(i, j, new Brick(i, j));
+                       map[i][j] =  new Brick(i, j); //new Ground(i, j, new Brick(i, j));
                    }
                    brickCnt++;
                }

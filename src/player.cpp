@@ -2,6 +2,9 @@
 
 Player::Player()
 {
+    bombCounter = 0;
+    maxBomb = 1;
+    fireSize = 3;
 }
 
 void Player::walk(directionEnum dir, const mapMatrix &map)
@@ -45,7 +48,7 @@ void Player::walk(directionEnum dir, const mapMatrix &map)
             y = newY;
             break;
         case UPGRADEBOMBS:
-            bombCounter++;
+            maxBomb++;
             x = newX;
             y = newY;
             break;
@@ -63,9 +66,10 @@ void Player::walk(directionEnum dir, const mapMatrix &map)
 void Player::placeBomb(mapMatrix &map)
 {
     // if the player still has bomb to place
-    if(bombCounter > 0)
+    if(bombCounter < maxBomb)
     {
-        //map[x][y] = new Bomb(fireSize, &bombCounter);
-        //bombCounter--;
+        bombCounter++;
+        map[x][y] = new Bomb(fireSize, &bombCounter);
+
     }
 }

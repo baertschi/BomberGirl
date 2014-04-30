@@ -1,6 +1,7 @@
 #ifndef MYTIMER_H
 #define MYTIMER_H
 
+#include <iostream>
 #include <QTimer>
 #include <list>
 #include "elapsing.h"
@@ -11,11 +12,11 @@ class MyTimer : public QTimer
 public:
     explicit MyTimer(QObject *parent = 0);
 
-    void attach(Elapsing &observer);
-    void detach(Elapsing &observer);
+    void attach(Elapsing *observer);
+    void detach(Elapsing *observer);
 
 private:
-//    std::list< *Elapsing > elapsingList;
+    std::list< Elapsing *> elapsingList;
 
 signals:
 

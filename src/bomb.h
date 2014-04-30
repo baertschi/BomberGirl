@@ -2,6 +2,7 @@
 #define BOMB_H
 #include "elapsing.h"
 
+
 class Bomb : public Elapsing
 {
 private:
