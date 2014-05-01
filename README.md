@@ -1,6 +1,8 @@
 BomberGirl
 ==========
 
+![BomberGirl Screenshot](img/Screenshot2.png)
+
 Qt Bomberman Clone
 
 # Basic Information
