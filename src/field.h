@@ -20,7 +20,6 @@ enum onBurnArgument {
     NOACTION,
     HARDBLOCK,
     BLOCK,
-    BURN,
     TRIGGER
 };
 

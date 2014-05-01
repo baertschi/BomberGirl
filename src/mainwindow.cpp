@@ -25,7 +25,7 @@ MainWindow::MainWindow()
     images[endFireImage] = new QPixmap(":/endFire.png");
     */
     ////////////////////////////////////////////////////////////////////////
-    // For Debuging
+    // For Debuging - no images created yet
     ////////////////////////////////////////////////////////////////////////
     images[bombItemImage] = new QPixmap(":/brick.png");
     images[flashItemImage] = new QPixmap(":/brick.png");
@@ -33,8 +33,8 @@ MainWindow::MainWindow()
     images[coreFireImage] = new QPixmap(":/brick.png");
     images[extensionFireImage ] = new QPixmap(":/brick.png");
     images[endFireImage] = new QPixmap(":/brick.png");
-
     ////////////////////////////////////////////////////////////////////////
+
     images[player1Image] = new QPixmap(":/player1.png");
     images[player2Image] = new QPixmap(":/player2.png");
 
@@ -78,6 +78,9 @@ void MainWindow::paintEvent(QPaintEvent *)
                        blockSize, blockSize, *images[player1Image]);
     painter.drawPixmap(blockSize*thePlayground.player2.x, blockSize*thePlayground.player2.y,
                        blockSize, blockSize, *images[player2Image]);
+
+    // draw fire if there is any
+    // todo
 }
 
 void MainWindow::resizeEvent(QResizeEvent *event)
