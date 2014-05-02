@@ -13,7 +13,7 @@ public:
     explicit MyTimer(QObject *parent = 0);
 
     void attach(Elapsing *observer);
-    void detach(Elapsing *observer);
+    void detach(/*Elapsing *observer*/);
 
 private:
     std::list< Elapsing *> elapsingList;

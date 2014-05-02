@@ -17,7 +17,7 @@ class Playground
 {
 public:
     Playground();
-
+    MyTimer *tick;
     mapMatrix map;
     Player player1, player2;
 };

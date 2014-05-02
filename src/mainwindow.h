@@ -19,7 +19,7 @@ class MainWindow : public QWidget
 public:
     MainWindow();
 
-    MyTimer *tick;
+
 protected:
      void paintEvent(QPaintEvent *);
      void resizeEvent(QResizeEvent *event);

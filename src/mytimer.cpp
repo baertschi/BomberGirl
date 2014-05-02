@@ -12,14 +12,16 @@ MyTimer::MyTimer(QObject *parent) :
 void MyTimer::masterTick()
 {
    // std::cout << "tick";// go through list and tick all elapsing objects there
+    detach();
 }
 void MyTimer::attach(Elapsing *observer)
 {
     elapsingList.push_front(observer);
 }
 
-void MyTimer::detach(Elapsing *observer)
+void MyTimer::detach(/*Elapsing *observer*/)
 {
-    elapsingList.pop_back();
+    elapsingList.clear();
+    //elapsingList.pop_back();
 
 }

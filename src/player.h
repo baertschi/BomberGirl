@@ -22,6 +22,7 @@ public:
 
     int x, y;
     imageEnum image;
+    MyTimer *tmr;
 };
 
 #endif // PLAYER_H

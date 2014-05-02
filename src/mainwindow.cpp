@@ -39,7 +39,7 @@ MainWindow::MainWindow()
     images[player2Image] = new QPixmap(":/player2.png");
 
     // Enabele Master Tick
-    tick = new MyTimer(this);
+    //MainWindow::tick = new MyTimer(this);
 
 }
 

@@ -1,12 +1,12 @@
 #include "bomb.h"
 #include "mainwindow.h"
 
-Bomb::Bomb(int _fireSize, int *_pBombCounter)
+Bomb::Bomb(int _fireSize, int *_pBombCounter, MyTimer* timer)
 {
     fireSize = _fireSize;
     pBombCounter = _pBombCounter;
     image = bombImage;
-    //MainWindow::tick->attach(this);
+    timer->attach(this);
 }
 
 onStepArgument Bomb::onStep(){

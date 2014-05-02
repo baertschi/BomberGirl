@@ -69,7 +69,7 @@ void Player::placeBomb(mapMatrix &map)
     if(bombCounter < maxBomb)
     {
         bombCounter++;
-        map[x][y] = new Bomb(fireSize, &bombCounter);
+        map[x][y] = new Bomb(fireSize, &bombCounter, tmr);
 
     }
 }

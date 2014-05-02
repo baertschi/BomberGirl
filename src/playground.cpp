@@ -7,7 +7,7 @@ Playground::Playground()
     // initialized to NULL pointers. --> therefore using the
     // STL vector class for this (initialization given as last argument).
     map = mapMatrix ( 13, std::vector<Field*> ( 11, (Field*)NULL ) );
-
+    tick = new MyTimer();
     // Initialize Map (Position [0, 0] is set to top left corner)
     for(int i = 1; i < 13; i+=2){
         for(int j = 1; j < 11; j +=2){
@@ -66,8 +66,10 @@ Playground::Playground()
     player1.image = player1Image;
     player1.x = 0;
     player1.y = 0;
+    player1.tmr = tick;
 
     player2.image = player2Image;
     player2.x = 12;
     player2.y = 10;
+    player2.tmr = tick;
 }
