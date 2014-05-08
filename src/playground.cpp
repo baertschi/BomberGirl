@@ -41,15 +41,15 @@ Playground::Playground()
                    if(qrand()%100 < 40 && itemCnt < 30){
                        // place BombItem or FlashItem
                        if(qrand()%100 < 50){
-                           map[i][j] =new Brick(i, j); // new Ground(i, j, new BombItem(i, j));
+                           map[i][j] = new Ground(i, j, new BombItem(i, j));
                        }
                        else{
-                           map[i][j] = new Brick(i, j); //new Ground(i, j, new FlashItem(i, j));
+                           map[i][j] = new Ground(i, j, new FlashItem(i, j));
                        }
                        itemCnt++;
                    }
                    else{
-                       map[i][j] =  new Brick(i, j); //new Ground(i, j, new Brick(i, j));
+                       map[i][j] = new Ground(i, j, new Brick(i, j));
                    }
                    brickCnt++;
                }

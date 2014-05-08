@@ -15,5 +15,7 @@ onStepArgument Bomb::onStep(){
 
 onBurnArgument Bomb::onBurn(){
     // TODO: trigger bomb immediately!
+    *pBombCounter = *pBombCounter - 1;
+    std::cout << "\nonburn\n";
     return TRIGGER;
 }

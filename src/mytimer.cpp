@@ -11,7 +11,7 @@ MyTimer::MyTimer(QObject *parent) :
 
 void MyTimer::masterTick()
 {
-   // std::cout << "tick";// go through list and tick all elapsing objects there
+    std::cout << "tick";// go through list and tick all elapsing objects there
     detach();
 }
 void MyTimer::attach(Elapsing *observer)
@@ -21,7 +21,18 @@ void MyTimer::attach(Elapsing *observer)
 
 void MyTimer::detach(/*Elapsing *observer*/)
 {
-    elapsingList.clear();
+    std::list<Elapsing *>::iterator it;
+    std::list<Elapsing *>::iterator iStart = elapsingList.begin();
+    std::list<Elapsing *>::iterator iEnd = elapsingList.end();
+    if(elapsingList.empty() == false){
+        for(it = iStart; it != iEnd; it++){
+            (*it)->onBurn();
+        }
+
+        elapsingList.clear();
+    }
+
     //elapsingList.pop_back();
+
 
 }

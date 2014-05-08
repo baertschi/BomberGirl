@@ -6,5 +6,7 @@
         <file alias="wall.png">img/wall.png</file>
         <file alias="player1.png">img/player1.png</file>
         <file alias="player2.png">img/player2.png</file>
+        <file alias="bombItem.png">img/bombItem.png</file>
+        <file alias="flashItem.png">img/flashItem.png</file>
     </qresource>
 </RCC>
