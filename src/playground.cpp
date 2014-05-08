@@ -7,15 +7,19 @@ Playground::Playground()
     // initialized to NULL pointers. --> therefore using the
     // STL vector class for this (initialization given as last argument).
     map = mapMatrix ( 13, std::vector<Field*> ( 11, (Field*)NULL ) );
+
     tick = new MyTimer();
-    // Initialize Map (Position [0, 0] is set to top left corner)
+
+
+    // Initialize map with walls (position [0, 0] is set to top left corner)
+
     for(int i = 1; i < 13; i+=2){
         for(int j = 1; j < 11; j +=2){
            map[i][j] = new Wall(i, j);     // not sure whether *map =... or map = ... is correct
         }
     }
 
-    // Set Ground Field in each Corner
+    // Set 5 Ground fields in each corner
     map[0][0] = new Ground(0, 0);
     map[12][10] = new Ground(12, 10);
     for(int i = 1; i < 3; i++){
