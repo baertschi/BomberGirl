@@ -2,6 +2,8 @@
 #define PLAYER_H
 #include "field.h"
 #include "bomb.h"
+#include "ground.h"
+
 
 
 enum directionEnum {LEFT, RIGHT, UP, DOWN};
