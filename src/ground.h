@@ -7,7 +7,6 @@
 #include "flashitem.h"
 #include "brick.h"
 #include "fire.h"
-#include "playground.h"
 
 class Ground : public Field
 {
