@@ -1,1 +1,159 @@
-My GitHub Page
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Documentation produced by the Html generator of Bouml (http://bouml.free.fr) -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Bomberman
+Documentation</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body bgcolor="#ffffff">
+
+<div class = "title">Bomberman<br />Documentation</div>
+<p></p>
+
+<!-- ============================================================= -->
+
+<a name="ref22_129"></a>
+<p>Properties:</p><ul>
+<li>html dir:<br /><div class="sub">C:/Users/Marcel/Documents/BFH/6_Semester/C++/UML/Bomberman/</div></li>
+</ul>
+<a name="ref19_128002"></a>
+<h1 class ="view">1 Use Case View Bomberman</h1>
+<div class="sub">
+<a name="ref11_128002"></a>
+<p align="center"><img src="fig128002.png" alt="" /></p>
+ <p align="center"><b>Bomberman</b></p><p><br /></p><p><br /></p>
+<table><tr><td><div class="element">Class <b><a href="class128002.html#refclass128002"><b>Player</b></a></b></div></td></tr></table>
+<a name="ref5_128002"></a>
+<h2 class ="usecase">1.1 Use Case Spiel starten</h2>
+<a name="ref5_128130"></a>
+<h2 class ="usecase">1.2 Use Case Spielen</h2>
+<a name="ref5_128258"></a>
+<h2 class ="usecase">1.3 Use Case Spiel beenden</h2>
+<a name="ref5_134786"></a>
+<h2 class ="usecase">1.4 Use Case Auflesen</h2>
+<a name="ref12_141058"></a>
+<p align="center"><img src="fig141058.png" alt="" /></p>
+ <p align="center"><b>Seq.-Diag. Bombe</b></p><p><br /></p><p><br /></p>
+<a name="ref16_141190"></a>
+<p align="center"><img src="fig141190.png" alt="" /></p>
+ <p align="center"><b>ObjectDiagram_StartingGameA</b></p><p><br /></p><p><br /></p>
+<a name="ref16_141318"></a>
+<p align="center"><img src="fig141318.png" alt="" /></p>
+ <p align="center"><b>ObjectDiagram_ReleaseBomb</b></p><p><br /></p><p><br /></p>
+<a name="ref16_141446"></a>
+<p align="center"><img src="fig141446.png" alt="" /></p>
+ <p align="center"><b>ObjectDiagram_ExplodingBomb</b></p><p><br /></p><p><br /></p>
+<a name="ref77_134662"></a>
+<table><tr><td><div class="element">Class instance  <b>Playground</b></div></td></tr></table><p>type :<a href="class129926.html#refclass129926"><b>Playground</b></a></p><a name="ref77_134790"></a>
+<table><tr><td><div class="element">Class instance  <b>player1p</b></div></td></tr></table><p>type :<a href="class130054.html#refclass130054"><b>Player</b></a></p><p>attributes :</p><ul>
+<li><a href="class130054.html#ref1_143234"><b>Image</b></a> = ImagePlayer1.jpeg</li>
+<li><a href="class130054.html#ref1_128130"><b>bombCounter</b></a> = 0</li>
+<li><a href="class130054.html#ref1_128258"><b>fireSize</b></a> = 3</li>
+<li><a href="class130054.html#ref1_128386"><b>maxBomb</b></a> = 1</li>
+<li><a href="class130054.html#ref1_142978"><b>x</b></a> = 0</li>
+<li><a href="class130054.html#ref1_143106"><b>y</b></a> = 0</li>
+</ul><a name="ref77_134918"></a>
+<table><tr><td><div class="element">Class instance  <b>player2I</b></div></td></tr></table><p>type :<a href="class130054.html#refclass130054"><b>Player</b></a></p><p>attributes :</p><ul>
+<li><a href="class130054.html#ref1_143234"><b>Image</b></a> = ImagePlayer2.jpeg</li>
+<li><a href="class130054.html#ref1_128130"><b>bombCounter</b></a> = 0</li>
+<li><a href="class130054.html#ref1_128258"><b>fireSize</b></a> = 3</li>
+<li><a href="class130054.html#ref1_128386"><b>maxBomb</b></a> = 1</li>
+<li><a href="class130054.html#ref1_142978"><b>x</b></a> = 12</li>
+<li><a href="class130054.html#ref1_143106"><b>y</b></a> = 10</li>
+</ul><a name="ref77_135046"></a>
+<table><tr><td><div class="element">Class instance  <b></b></div></td></tr></table><p>type :<a href="class128646.html#refclass128646"><b>Ground</b></a></p><p>attributes :</p><ul>
+<li><a href="class128006.html#ref1_129026"><b>Image</b></a> = ImageGround.jpeg</li>
+<li><a href="class128646.html#ref1_134662"><b>bombElement</b></a> = NULL</li>
+<li><a href="class128646.html#ref1_134534"><b>brickElement</b></a> = (address)</li>
+<li><a href="class128646.html#ref1_134790"><b>fireElement</b></a> = NULL</li>
+<li><a href="class128646.html#ref1_134918"><b>itemElement</b></a> = NULL</li>
+<li><a href="class128006.html#ref1_128514"><b>x</b></a> = 0</li>
+<li><a href="class128006.html#ref1_128642"><b>y</b></a> = 3</li>
+</ul><a name="ref77_135174"></a>
+<table><tr><td><div class="element">Class instance  <b></b></div></td></tr></table><p>type :<a href="class128390.html#refclass128390"><b>Wall</b></a></p><p>attributes :</p><ul>
+<li><a href="class128006.html#ref1_129026"><b>Image</b></a> = ImageWall.jpeg</li>
+<li><a href="class128006.html#ref1_128514"><b>x</b></a> = 1</li>
+<li><a href="class128006.html#ref1_128642"><b>y</b></a> = 1</li>
+</ul><a name="ref77_135302"></a>
+<table><tr><td><div class="element">Class instance  <b>brickElement()</b></div></td></tr></table><p>type :<a href="class129414.html#refclass129414"><b>Brick</b></a></p><p>attributes :</p><ul>
+<li><a href="class128006.html#ref1_129026"><b>Image</b></a> = ImageBrick.jpeg</li>
+<li><a href="class147714.html#ref1_136450"><b>fieldOrigin</b></a> = (address)</li>
+<li><a href="class128006.html#ref1_128514"><b>x</b></a> = 0</li>
+<li><a href="class128006.html#ref1_128642"><b>y</b></a> = 3</li>
+</ul><a name="ref77_135430"></a>
+<table><tr><td><div class="element">Class instance  <b>flashElement</b></div></td></tr></table><p>type :<a href="class134530.html#refclass134530"><b>FlashItem</b></a></p><p>attributes :</p><ul>
+<li><a href="class128006.html#ref1_129026"><b>Image</b></a> = FlashImage.jpeg</li>
+<li><a href="class147714.html#ref1_136450"><b>fieldOrigin</b></a> = (address)</li>
+<li><a href="class128006.html#ref1_128514"><b>x</b></a> = 0</li>
+<li><a href="class128006.html#ref1_128642"><b>y</b></a> = 3</li>
+</ul><a name="ref77_135558"></a>
+<table><tr><td><div class="element">Class instance  <b>bombElement</b></div></td></tr></table><p>type :<a href="class134658.html#refclass134658"><b>BombItem</b></a></p><a name="ref77_135686"></a>
+<table><tr><td><div class="element">Class instance  <b>bombElement</b></div></td></tr></table><p>type :<a href="class129798.html#refclass129798"><b>Bomb</b></a></p><a name="ref77_135814"></a>
+<table><tr><td><div class="element">Class instance  <b>fireElement</b></div></td></tr></table><p>type :<a href="class128774.html#refclass128774"><b>Fire</b></a></p><a name="ref77_135942"></a>
+<table><tr><td><div class="element">Class instance  <b>itemElement</b></div></td></tr></table><p>type :<a href="class128902.html#refclass128902"><b>Item</b></a></p><a name="ref16_141574"></a>
+<p align="center"><img src="fig141574.png" alt="" /></p>
+ <p align="center"><b>ObjectDiagram_StartingGameB</b></p><p><br /></p><p><br /></p>
+<a name="ref77_136070"></a>
+<table><tr><td><div class="element">Class instance  <b>itemElement</b></div></td></tr></table><p>type :<a href="class128902.html#refclass128902"><b>Item</b></a></p></div>
+<a name="ref18_128006"></a>
+<h1 class ="view">2 Class View Klassendiagramm</h1>
+<div class="sub">
+<a name="ref10_128006"></a>
+<p align="center"><img src="fig128006.png" alt="" /></p>
+ <p align="center"><b>Classes Derives</b></p><p><br /></p><p><br /></p>
+<table><tr><td><div class="element">Class <b><a href="class128006.html#refclass128006"><b>Field</b></a></b></div></td></tr></table>
+<table><tr><td><div class="element">Class <b><a href="class128390.html#refclass128390"><b>Wall</b></a></b></div></td></tr></table>
+<table><tr><td><div class="element">Class <b><a href="class128646.html#refclass128646"><b>Ground</b></a></b></div></td></tr></table>
+<table><tr><td><div class="element">Class <b><a href="class128774.html#refclass128774"><b>Fire</b></a></b></div></td></tr></table>
+<table><tr><td><div class="element">Class <b><a href="class128902.html#refclass128902"><b>Item</b></a></b></div></td></tr></table>
+<table><tr><td><div class="element">Class <b><a href="class129030.html#refclass129030"><b>CoreFire</b></a></b></div></td></tr></table>
+<table><tr><td><div class="element">Class <b><a href="class129158.html#refclass129158"><b>EndFire</b></a></b></div></td></tr></table>
+<table><tr><td><div class="element">Class <b><a href="class129286.html#refclass129286"><b>ExtensionFire</b></a></b></div></td></tr></table>
+<table><tr><td><div class="element">Class <b><a href="class129414.html#refclass129414"><b>Brick</b></a></b></div></td></tr></table>
+<table><tr><td><div class="element">Class <b><a href="class129798.html#refclass129798"><b>Bomb</b></a></b></div></td></tr></table>
+<table><tr><td><div class="element">Class <b><a href="class129926.html#refclass129926"><b>Playground</b></a></b></div></td></tr></table>
+<table><tr><td><div class="element">Class <b><a href="class130054.html#refclass130054"><b>Player</b></a></b></div></td></tr></table>
+<a name="ref10_134530"></a>
+<p align="center"><img src="fig134530.png" alt="" /></p>
+ <p align="center"><b>Class Associations</b></p><p><br /></p><p><br /></p>
+<table><tr><td><div class="element">Class <b><a href="class134530.html#refclass134530"><b>FlashItem</b></a></b></div></td></tr></table>
+<table><tr><td><div class="element">Class <b><a href="class134658.html#refclass134658"><b>BombItem</b></a></b></div></td></tr></table>
+<a name="ref77_128002"></a>
+<table><tr><td><div class="element">Class instance  <b></b></div></td></tr></table><p>type :<a href="class128006.html#refclass128006"><b>Field</b></a></p><a name="ref77_128130"></a>
+<table><tr><td><div class="element">Class instance  <b>Field[0]</b></div></td></tr></table><p>type :<a href="class128006.html#refclass128006"><b>Field</b></a></p><p>attributes :</p><ul>
+<li><a href="class128006.html#ref1_129026"><b>Image</b></a> = none</li>
+<li><a href="class128006.html#ref1_128514"><b>x</b></a> = 3</li>
+<li><a href="class128006.html#ref1_128642"><b>y</b></a> = 37</li>
+</ul><a name="ref77_128258"></a>
+<table><tr><td><div class="element">Class instance  <b>Bomb[0]</b></div></td></tr></table><p>type :<a href="class129798.html#refclass129798"><b>Bomb</b></a></p><p>attributes :</p><ul>
+<li><a href="class129798.html#ref1_129410"><b>fireSize</b></a> = 4</li>
+</ul><a name="ref16_134534"></a>
+<p align="center"><img src="fig134534.png" alt="" /></p>
+ <p align="center"><b>Objektdiagramm</b></p><p><br /></p><p><br /></p>
+<a name="ref77_128006"></a>
+<table><tr><td><div class="element">Class instance  <b>Player_1</b></div></td></tr></table><p>type :<a href="class130054.html#refclass130054"><b>Player</b></a></p><p>attributes :</p><ul>
+<li><a href="class130054.html#ref1_128130"><b>bombCounter</b></a> = 0</li>
+<li><a href="class130054.html#ref1_128258"><b>fireSize</b></a> = 0</li>
+<li><a href="class130054.html#ref1_128386"><b>maxBomb</b></a> = 1</li>
+</ul><a name="ref77_128134"></a>
+<table><tr><td><div class="element">Class instance  <b>Player_2</b></div></td></tr></table><p>type :<a href="class130054.html#refclass130054"><b>Player</b></a></p><p>attributes :</p><ul>
+<li><a href="class130054.html#ref1_128130"><b>bombCounter</b></a> = 0</li>
+<li><a href="class130054.html#ref1_128258"><b>fireSize</b></a> = 0</li>
+<li><a href="class130054.html#ref1_128386"><b>maxBomb</b></a> = 1</li>
+</ul><table><tr><td><div class="element">Class <b><a href="class141186.html#refclass141186"><b>Elapsing</b></a></b></div></td></tr></table>
+<table><tr><td><div class="element">Class <b><a href="class147714.html#refclass147714"><b>FieldContent</b></a></b></div></td></tr></table>
+<table><tr><td><div class="element">Class <b><a href="class147842.html#refclass147842"><b>Timer</b></a></b></div></td></tr></table>
+<table><tr><td><div class="element">Class <b><a href="class154370.html#refclass154370"><b>MainWindow</b></a></b></div></td></tr></table>
+<table><tr><td><div class="element">Class <b><a href="class154498.html#refclass154498"><b>QWidget</b></a></b></div></td></tr></table>
+<table><tr><td><div class="element">Class <b><a href="class154626.html#refclass154626"><b>QTimer</b></a></b></div></td></tr></table>
+</div>
+<a name="ref22_128006"></a>
+<h1 class ="package">3 Package Logic</h1>
+<a name="ref22_128134"></a>
+<h1 class ="package">4 Package Graphic_QT</h1>
+</body>
+</html>

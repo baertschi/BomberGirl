@@ -1,0 +1,40 @@
+format 76
+
+classinstance 128002 class_ref 130054 // Player
+ name "PlayerOne"  xyz 405 106 2000
+classinstance 128130 class_ref 129798 // Bomb
+ name "TheBomb"  xyz 410 180 2000
+note 128258 "Situation: Player1 legt Bombe
+-Bombe legen
+-Bombe Explodiert
+	-Deckt Item Auf
+	-Schlägt in Wand ein"
+  xyzwh 55 50 2000 183 89
+classinstance 128386 class_ref 128774 // Fire
+ name "TheFire"  xyz 261 267 2000
+classinstance 128898 class_ref 129030 // CoreFire
+ name "TheCoreFire"  xyz 226 328 2000
+classinstance 129026 class_ref 129158 // EndFire
+ name "TheExtensionFire"  xyz 81 326 2000
+classinstance 129154 class_ref 129158 // EndFire
+ name "TheEndFire"  xyz 355 329 2000
+classinstance 129282 class_ref 128646 // Ground
+ name "TheGround"  xyz 574 327 2000
+classinstance 129410 class_ref 128390 // Wall
+ name "TheWall"  xyz 496 327 2000
+classinstance 129538 class_ref 129542 // ItemBrick
+ name "TheItemBrick"  xyz 686 327 2000
+classinstance 129794 class_ref 134530 // FlashItem
+ name "TheFlashItem"  xyz 813 327 2000
+linkcanvas 128642
+  from ref 128002 z 2001 to ref 128130
+linkcanvas 128770
+  from ref 128130 z 2001 to ref 128386
+linkcanvas 129922
+  from ref 128386 z 2001 to ref 129026
+linkcanvas 130050
+  from ref 128386 z 2001 to ref 128898
+linkcanvas 130178
+  from ref 128386 z 2001 to ref 129154
+no_msg
+end

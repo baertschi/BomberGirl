@@ -1,0 +1,13 @@
+window_sizes 1280 672 320 960 512 82
+diagrams
+  usecasediagram_ref 128002 // Bomberman
+    759 412 100 4 0 0
+  active  classdiagram_ref 128006 // Classes Derives
+    954 516 100 4 0 0
+end
+show_stereotypes
+selected 
+package_ref 129 // Bomberman
+open
+end
+end

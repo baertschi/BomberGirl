@@ -1,0 +1,1196 @@
+format 76
+"Bomberman"
+  revision 8
+  modified_by 2 "Marcel"
+
+
+  
+  // class settings
+  default_attribute_visibility private default_relation_visibility private default_operation_visibility public
+  //class diagram settings
+  draw_all_relations yes hide_attributes no hide_operations no hide_getset_operations no show_members_full_definition no show_members_visibility no show_members_stereotype no show_members_context no show_members_multiplicity no show_members_initialization no show_attribute_modifiers no member_max_width 127 show_parameter_dir yes show_parameter_name yes package_name_in_tab no class_drawing_mode natural drawing_language uml show_context_mode no auto_label_position yes show_relation_modifiers no show_relation_visibility no show_infonote no shadow yes show_stereotype_properties no
+  //use case diagram settings
+  package_name_in_tab no show_context no auto_label_position yes draw_all_relations yes class_drawing_mode actor shadow yes show_stereotype_properties no
+  //sequence diagram settings
+  show_full_operations_definition no write_horizontally yes class_drawing_mode natural drawing_language uml draw_all_relations yes shadow yes show_stereotype_properties no show_class_context_mode no show_msg_context_mode no
+  //collaboration diagram settings
+  show_full_operations_definition no show_hierarchical_rank no write_horizontally yes class_drawing_mode natural drawing_language uml package_name_in_tab no show_context no show_msg_context no draw_all_relations yes shadow yes show_stereotype_properties no
+  //object diagram settings
+   write_horizontally yes package_name_in_tab no show_context no auto_label_position yes draw_all_relations yes shadow yes show_stereotype_properties no
+  //component diagram settings
+  package_name_in_tab no show_context no auto_label_position yes draw_all_relations yes shadow yes
+  draw_component_as_icon no show_component_req_prov no show_component_rea no show_stereotype_properties no
+  //deployment diagram settings
+  package_name_in_tab no show_context no write_horizontally yes auto_label_position yes draw_all_relations yes shadow yes
+  draw_component_as_icon no show_component_req_prov no show_component_rea no show_stereotype_properties no
+  //state diagram settings
+  package_name_in_tab no show_context no auto_label_position yes write_trans_label_horizontally yes show_trans_definition no draw_all_relations yes shadow yes
+  show_activities yes region_horizontally yes drawing_language uml show_stereotype_properties no
+  //activity diagram settings
+  package_name_in_tab no show_context no show_opaque_action_definition no auto_label_position yes write_flow_label_horizontally no draw_all_relations yes shadow yes
+  show_infonote yes drawing_language uml show_stereotype_properties no
+  
+  class_color yellow duration_color transparent continuation_color gray note_color blue fragment_color transparent subject_color transparent usecase_color yellow package_color transparent component_color green artifact_color green deploymentnode_color gray state_color yellow stateaction_color transparent activity_color transparent activityregion_color transparent activitypartition_color transparent activityaction_color transparent parameterpin_color white 
+  font_size 8
+  diagram_format A4-Landscape
+
+  image_root_dir ""
+
+  mark_for_import
+  
+  ncouples 1
+  key "html dir" value "C:/Users/cyril/DropboxThesis/Dropbox/BomberGirl/UML/Bomberman/svg/"
+  usecaseview 128002 "Bomberman"
+    //use case diagram settings
+    package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    usecasediagram 128002 "Bomberman"
+      package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
+      size A4
+    end
+
+    class 128002 "Player"
+      visibility package stereotype "actor"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    usecase 128002 "Spiel starten"
+      //use case diagram settings
+      package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
+      //sequence diagram settings
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+      //collaboration diagram settings
+      show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+      //class diagram settings
+      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      //object diagram settings
+       write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+      //state diagram settings
+      package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+      show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+      //activity diagram settings
+      package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+      show_infonote default drawing_language default show_stereotype_properties default
+    end
+
+    usecase 128130 "Spielen"
+      //use case diagram settings
+      package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
+      //sequence diagram settings
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+      //collaboration diagram settings
+      show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+      //class diagram settings
+      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      //object diagram settings
+       write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+      //state diagram settings
+      package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+      show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+      //activity diagram settings
+      package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+      show_infonote default drawing_language default show_stereotype_properties default
+    end
+
+    usecase 128258 "Spiel beenden"
+      //use case diagram settings
+      package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
+      //sequence diagram settings
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+      //collaboration diagram settings
+      show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+      //class diagram settings
+      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      //object diagram settings
+       write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+      //state diagram settings
+      package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+      show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+      //activity diagram settings
+      package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+      show_infonote default drawing_language default show_stereotype_properties default
+    end
+
+    usecase 134786 "Auflesen"
+      //use case diagram settings
+      package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
+      //sequence diagram settings
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+      //collaboration diagram settings
+      show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+      //class diagram settings
+      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      //object diagram settings
+       write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+      //state diagram settings
+      package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+      show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+      //activity diagram settings
+      package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+      show_infonote default drawing_language default show_stereotype_properties default
+    end
+  end
+
+  classview 128006 "Klassendiagramm"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    classdiagram 128006 "Classes Derives"
+      draw_all_relations no hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4
+    end
+
+    class 128006 "Field"
+      abstract visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 128134 // <association>
+	relation_ref 128006 // <association>
+      end
+
+      classrelation 134534 // <composition>
+	relation_ref 131206 // <composition>
+      end
+
+      classrelation 134786 // <association>
+	relation_ref 132226 // <association>
+      end
+
+      attribute 128514 "x"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 128642 "y"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 129026 "Image"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 128130 "onStep"
+	abstract cpp_virtual public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 128258 "onBurn"
+	abstract cpp_virtual public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+    end
+
+    class 128134 "HardField"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 128006 // <association>
+	relation 128006 ----
+	  a role_name "" private
+	    classrelation_ref 128006 // <association>
+	  b role_name "" private
+	    classrelation_ref 128134 // <association>
+      end
+
+      classrelation 128646 // <association>
+	relation_ref 128262 // <association>
+      end
+
+      classrelation 128902 // <association>
+	relation_ref 128390 // <association>
+      end
+
+      classrelation 128002 // <generalisation>
+	relation 128002 ---|>
+	  a public
+	    classrelation_ref 128002 // <generalisation>
+	  b parent class_ref 128006 // Field
+      end
+
+      classrelation 132738 // <association>
+	relation_ref 131202 // <association>
+      end
+    end
+
+    class 128262 "SoftField"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 133254 // <association>
+	relation_ref 130566 // <association>
+      end
+
+      classrelation 128130 // <generalisation>
+	relation 128130 ---|>
+	  a public
+	    classrelation_ref 128130 // <generalisation>
+	  b parent class_ref 128006 // Field
+      end
+    end
+
+    class 128390 "Wall"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 128518 // <association>
+	relation 128262 ----
+	  a role_name "" private
+	    classrelation_ref 128518 // <association>
+	  b role_name "" private
+	    classrelation_ref 128646 // <association>
+      end
+
+      classrelation 128258 // <generalisation>
+	relation 128258 ---|>
+	  a public
+	    classrelation_ref 128258 // <generalisation>
+	  b parent class_ref 128134 // HardField
+      end
+
+      classrelation 130946 // <composition>
+	relation_ref 130306 // <composition>
+      end
+    end
+
+    class 128518 "Destroyable"
+      abstract visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 128774 // <association>
+	relation 128390 ----
+	  a role_name "" private
+	    classrelation_ref 128774 // <association>
+	  b role_name "" private
+	    classrelation_ref 128902 // <association>
+      end
+
+      classrelation 129158 // <association>
+	relation_ref 128518 // <association>
+      end
+
+      classrelation 129414 // <association>
+	relation_ref 128646 // <association>
+      end
+
+      classrelation 132614 // <association>
+	relation 130310 ----
+	  a role_name "" private
+	    classrelation_ref 132614 // <association>
+	  b role_name "" private
+	    classrelation_ref 132742 // <association>
+      end
+
+      classrelation 133510 // <association>
+	relation_ref 130694 // <association>
+      end
+
+      classrelation 128386 // <generalisation>
+	relation 128386 ---|>
+	  a public
+	    classrelation_ref 128386 // <generalisation>
+	  b parent class_ref 128134 // HardField
+      end
+
+      classrelation 133250 // <association>
+	relation_ref 131458 // <association>
+      end
+    end
+
+    class 128646 "Ground"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 131974 // <association>
+	relation_ref 129926 // <association>
+      end
+
+      classrelation 133126 // <association>
+	relation 130566 ----
+	  a role_name "" private
+	    classrelation_ref 133126 // <association>
+	  b role_name "" private
+	    classrelation_ref 133254 // <association>
+      end
+
+      classrelation 128642 // <generalisation>
+	relation 128642 ---|>
+	  a public
+	    classrelation_ref 128642 // <generalisation>
+	  b parent class_ref 128262 // SoftField
+      end
+
+      classrelation 130434 // <association>
+	relation_ref 130050 // <association>
+      end
+
+      classrelation 131714 // <composition>
+	relation_ref 130690 // <composition>
+      end
+    end
+
+    class 128774 "Fire"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 131206 // <association>
+	relation_ref 129542 // <association>
+      end
+
+      classrelation 131462 // <association>
+	relation_ref 129670 // <association>
+      end
+
+      classrelation 131718 // <association>
+	relation_ref 129798 // <association>
+      end
+
+      classrelation 132742 // <association>
+	relation_ref 130310 // <association>
+      end
+
+      classrelation 133382 // <association>
+	relation 130694 ----
+	  a role_name "" private
+	    classrelation_ref 133382 // <association>
+	  b role_name "" private
+	    classrelation_ref 133510 // <association>
+      end
+
+      classrelation 128514 // <generalisation>
+	relation 128514 ---|>
+	  a public
+	    classrelation_ref 128514 // <generalisation>
+	  b parent class_ref 128262 // SoftField
+      end
+
+      classrelation 129922 // <association>
+	relation_ref 129794 // <association>
+      end
+
+      classrelation 130050 // <association>
+	relation 129922 ----
+	  a role_name "" private
+	    classrelation_ref 130050 // <association>
+	  b role_name "" private
+	    classrelation_ref 130178 // <association>
+      end
+
+      classrelation 130306 // <association>
+	relation 130050 ----
+	  a role_name "" private
+	    classrelation_ref 130306 // <association>
+	  b role_name "" private
+	    classrelation_ref 130434 // <association>
+      end
+
+      classrelation 130562 // <association>
+	relation 130178 ----
+	  a role_name "" private
+	    classrelation_ref 130562 // <association>
+	  b role_name "" private
+	    classrelation_ref 130690 // <association>
+      end
+
+      classrelation 131842 // <composition>
+	relation 130818 *---
+	  a role_name "" multiplicity "1..*" private
+	    classrelation_ref 131842 // <composition>
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 131970 // <composition>
+      end
+
+      classrelation 132098 // <composition>
+	relation 130946 *---
+	  a role_name "" multiplicity "1..4" private
+	    classrelation_ref 132098 // <composition>
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 132226 // <composition>
+      end
+
+      classrelation 132354 // <composition>
+	relation 131074 *---
+	  a role_name "" multiplicity "1" private
+	    classrelation_ref 132354 // <composition>
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 132482 // <composition>
+      end
+
+      classrelation 132994 // <association>
+	relation_ref 131330 // <association>
+      end
+
+      classrelation 133122 // <association>
+	relation 131458 ----
+	  a role_name "" private
+	    classrelation_ref 133122 // <association>
+	  b role_name "" private
+	    classrelation_ref 133250 // <association>
+      end
+
+      classrelation 133378 // <association>
+	relation 131586 ----
+	  a role_name "" private
+	    classrelation_ref 133378 // <association>
+	  b role_name "" private
+	    classrelation_ref 133506 // <association>
+      end
+
+      attribute 129154 "countdown"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 129282 "fireSize"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 129538 "maxCountdown"
+	class_attribute const_attribute private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+    end
+
+    class 128902 "Item"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 132230 // <association>
+	relation_ref 130054 // <association>
+      end
+
+      classrelation 132486 // <association>
+	relation_ref 130182 // <association>
+      end
+
+      classrelation 128770 // <generalisation>
+	relation 128770 ---|>
+	  a public
+	    classrelation_ref 128770 // <generalisation>
+	  b parent class_ref 128262 // SoftField
+      end
+
+      classrelation 133890 // <association>
+	relation 131842 ----
+	  a role_name "" private
+	    classrelation_ref 133890 // <association>
+	  b role_name "" private
+	    classrelation_ref 134018 // <association>
+      end
+
+      classrelation 134274 // <association>
+	relation_ref 131970 // <association>
+      end
+    end
+
+    class 129030 "CoreFire"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 131078 // <association>
+	relation 129542 ----
+	  a role_name "" private
+	    classrelation_ref 131078 // <association>
+	  b role_name "" private
+	    classrelation_ref 131206 // <association>
+      end
+
+      classrelation 129154 // <generalisation>
+	relation 129154 ---|>
+	  a public
+	    classrelation_ref 129154 // <generalisation>
+	  b parent class_ref 128774 // Fire
+      end
+
+      classrelation 132482 // <composition>
+	relation_ref 131074 // <composition>
+      end
+    end
+
+    class 129158 "EndFire"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 131590 // <association>
+	relation 129798 ----
+	  a role_name "" private
+	    classrelation_ref 131590 // <association>
+	  b role_name "" private
+	    classrelation_ref 131718 // <association>
+      end
+
+      classrelation 129410 // <generalisation>
+	relation 129410 ---|>
+	  a public
+	    classrelation_ref 129410 // <generalisation>
+	  b parent class_ref 128774 // Fire
+      end
+
+      classrelation 132226 // <composition>
+	relation_ref 130946 // <composition>
+      end
+    end
+
+    class 129286 "ExtensionFire"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 131334 // <association>
+	relation 129670 ----
+	  a role_name "" private
+	    classrelation_ref 131334 // <association>
+	  b role_name "" private
+	    classrelation_ref 131462 // <association>
+      end
+
+      classrelation 129282 // <generalisation>
+	relation 129282 ---|>
+	  a public
+	    classrelation_ref 129282 // <generalisation>
+	  b parent class_ref 128774 // Fire
+      end
+
+      classrelation 131970 // <composition>
+	relation_ref 130818 // <composition>
+      end
+    end
+
+    class 129414 "Brick"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 129030 // <association>
+	relation 128518 ----
+	  a role_name "" private
+	    classrelation_ref 129030 // <association>
+	  b role_name "" private
+	    classrelation_ref 129158 // <association>
+      end
+
+      classrelation 129670 // <association>
+	relation_ref 128774 // <association>
+      end
+
+      classrelation 129926 // <association>
+	relation_ref 128902 // <association>
+      end
+
+      classrelation 128898 // <generalisation>
+	relation 128898 ---|>
+	  a public
+	    classrelation_ref 128898 // <generalisation>
+	  b parent class_ref 128518 // Destroyable
+      end
+    end
+
+    class 129542 "ItemBrick"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 129542 // <association>
+	relation 128774 ----
+	  a role_name "" private
+	    classrelation_ref 129542 // <association>
+	  b role_name "" private
+	    classrelation_ref 129670 // <association>
+      end
+
+      classrelation 132102 // <association>
+	relation 130054 ----
+	  a role_name "" private
+	    classrelation_ref 132102 // <association>
+	  b role_name "" private
+	    classrelation_ref 132230 // <association>
+      end
+
+      classrelation 132358 // <association>
+	relation 130182 ----
+	  a role_name "" private
+	    classrelation_ref 132358 // <association>
+	  b role_name "" private
+	    classrelation_ref 132486 // <association>
+      end
+
+      classrelation 129538 // <generalisation>
+	relation 129538 ---|>
+	  a public
+	    classrelation_ref 129538 // <generalisation>
+	  b parent class_ref 129414 // Brick
+      end
+
+      classrelation 131202 // <composition>
+	relation_ref 130434 // <composition>
+      end
+
+      classrelation 134146 // <association>
+	relation 131970 ----
+	  a role_name "" private
+	    classrelation_ref 134146 // <association>
+	  b role_name "" private
+	    classrelation_ref 134274 // <association>
+      end
+    end
+
+    class 129670 "EmptyBrick"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 129798 // <association>
+	relation 128902 ----
+	  a role_name "" private
+	    classrelation_ref 129798 // <association>
+	  b role_name "" private
+	    classrelation_ref 129926 // <association>
+      end
+
+      classrelation 131846 // <association>
+	relation 129926 ----
+	  a role_name "" private
+	    classrelation_ref 131846 // <association>
+	  b role_name "" private
+	    classrelation_ref 131974 // <association>
+      end
+
+      classrelation 129666 // <generalisation>
+	relation 129666 ---|>
+	  a public
+	    classrelation_ref 129666 // <generalisation>
+	  b parent class_ref 129414 // Brick
+      end
+
+      classrelation 131458 // <composition>
+	relation_ref 130562 // <composition>
+      end
+    end
+
+    class 129798 "Bomb"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 129286 // <association>
+	relation 128646 ----
+	  a role_name "" private
+	    classrelation_ref 129286 // <association>
+	  b role_name "" private
+	    classrelation_ref 129414 // <association>
+      end
+
+      classrelation 129026 // <generalisation>
+	relation 129026 ---|>
+	  a public
+	    classrelation_ref 129026 // <generalisation>
+	  b parent class_ref 128518 // Destroyable
+      end
+
+      classrelation 129794 // <association>
+	relation 129794 ----
+	  a role_name "" private
+	    classrelation_ref 129794 // <association>
+	  b role_name "" private
+	    classrelation_ref 129922 // <association>
+      end
+
+      classrelation 132866 // <association>
+	relation 131330 ----
+	  a role_name "" private
+	    classrelation_ref 132866 // <association>
+	  b role_name "" private
+	    classrelation_ref 132994 // <association>
+      end
+
+      classrelation 133762 // <association>
+	relation_ref 131714 // <association>
+      end
+
+      attribute 129410 "fireSize"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 129666 "maxCountdown"
+	class_attribute const_attribute private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+    end
+
+    class 129926 "Playground"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 133766 // <association>
+	relation_ref 130822 // <association>
+      end
+
+      classrelation 134022 // <composition>
+	relation_ref 130950 // <composition>
+      end
+
+      classrelation 134150 // <composition>
+	relation 131078 *---
+	  a role_name "" multiplicity "2" private
+	    classrelation_ref 134150 // <composition>
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 134278 // <composition>
+      end
+
+      classrelation 134406 // <composition>
+	relation 131206 *---
+	  a role_name "" multiplicity "143" private
+	    classrelation_ref 134406 // <composition>
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 134534 // <composition>
+      end
+
+      classrelation 130178 // <association>
+	relation_ref 129922 // <association>
+      end
+
+      classrelation 130818 // <composition>
+	relation 130306 *---
+	  a role_name "" multiplicity "30" private
+	    classrelation_ref 130818 // <composition>
+	  b role_name "" private
+	    classrelation_ref 130946 // <composition>
+      end
+
+      classrelation 131074 // <composition>
+	relation 130434 *---
+	  a role_name "" multiplicity "30" private
+	    classrelation_ref 131074 // <composition>
+	  b role_name "" private
+	    classrelation_ref 131202 // <composition>
+      end
+
+      classrelation 131330 // <composition>
+	relation 130562 *---
+	  a role_name "" multiplicity "43" private
+	    classrelation_ref 131330 // <composition>
+	  b role_name "" private
+	    classrelation_ref 131458 // <composition>
+      end
+
+      classrelation 131586 // <composition>
+	relation 130690 *---
+	  a role_name "" multiplicity "40" private
+	    classrelation_ref 131586 // <composition>
+	  b role_name "" private
+	    classrelation_ref 131714 // <composition>
+      end
+
+      classrelation 134530 // <association>
+	relation_ref 132098 // <association>
+      end
+
+      classrelation 134658 // <association>
+	relation 132226 ----
+	  a role_name "" private
+	    classrelation_ref 134658 // <association>
+	  b role_name "" private
+	    classrelation_ref 134786 // <association>
+      end
+
+      attribute 128002 "map"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 134914 // <composition>
+	relation 132354 *---
+	  a role_name "" multiplicity "2" private
+	    classrelation_ref 134914 // <composition>
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 135042 // <composition>
+      end
+
+      operation 135170 "initialize"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+    end
+
+    class 130054 "Player"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 133638 // <association>
+	relation 130822 ----
+	  a role_name "" private
+	    classrelation_ref 133638 // <association>
+	  b role_name "" private
+	    classrelation_ref 133766 // <association>
+      end
+
+      classrelation 133894 // <composition>
+	relation 130950 *---
+	  a role_name "" private
+	    classrelation_ref 133894 // <composition>
+	  b role_name "" private
+	    classrelation_ref 134022 // <composition>
+      end
+
+      classrelation 134278 // <composition>
+	relation_ref 131078 // <composition>
+      end
+
+      classrelation 130690 // <association>
+	relation_ref 130178 // <association>
+      end
+
+      classrelation 132610 // <association>
+	relation 131202 ----
+	  a role_name "" private
+	    classrelation_ref 132610 // <association>
+	  b role_name "" private
+	    classrelation_ref 132738 // <association>
+      end
+
+      classrelation 133506 // <association>
+	relation_ref 131586 // <association>
+      end
+
+      classrelation 133634 // <association>
+	relation 131714 ----
+	  a role_name "" private
+	    classrelation_ref 133634 // <association>
+	  b role_name "" private
+	    classrelation_ref 133762 // <association>
+      end
+
+      classrelation 134018 // <association>
+	relation_ref 131842 // <association>
+      end
+
+      classrelation 134402 // <association>
+	relation 132098 ----
+	  a role_name "" private
+	    classrelation_ref 134402 // <association>
+	  b role_name "" private
+	    classrelation_ref 134530 // <association>
+      end
+
+      attribute 128130 "bombList"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 128258 "fireSize"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 128386 "maxBomb"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 135042 // <composition>
+	relation_ref 132354 // <composition>
+      end
+
+      operation 134786 "die"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 134914 "walk"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "direction" explicit_type ""
+	
+	
+	
+	
+	
+      end
+
+      operation 135042 "placeBomb"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+    end
+
+    classdiagram 134530 "Class Associations"
+      draw_all_relations no hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4
+    end
+
+    class 134530 "FlashItem"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 135170 // <generalisation>
+	relation 132482 ---|>
+	  a public
+	    classrelation_ref 135170 // <generalisation>
+	  b parent class_ref 128902 // Item
+      end
+    end
+
+    class 134658 "BombItem"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 135298 // <generalisation>
+	relation 132610 ---|>
+	  a public
+	    classrelation_ref 135298 // <generalisation>
+	  b parent class_ref 128902 // Item
+      end
+    end
+
+    classinstance 128002 ""
+      type class_ref 128006 // Field
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 128130 "Field[0]"
+      type class_ref 128006 // Field
+      attributes
+        attribute_ref 129026 // Image
+          "none"
+        attribute_ref 128514 // x
+          "3"
+        attribute_ref 128642 // y
+          "37"
+        end
+      relations
+        end
+    end
+
+    classinstance 128258 "Bomb[0]"
+      type class_ref 129798 // Bomb
+      attributes
+        attribute_ref 129026 // Image
+          "BombImage"
+        attribute_ref 129410 // fireSize
+          "4"
+        attribute_ref 129666 // maxCountdown
+          "3"
+        attribute_ref 128514 // x
+          "6"
+        attribute_ref 128642 // y
+          "10"
+        end
+      relations
+        end
+    end
+
+    objectdiagram 134534 "Objektdiagramm"
+       write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+      size A4-Landscape
+    end
+
+    collaborationdiagram 141058 "Collaboration_PlaceBomb"
+      show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+      size A4-Landscape
+    end
+  end
+
+  package_ref 128006 // Logic
+
+  package_ref 128134 // Graphic_QT
+end

@@ -1,0 +1,8 @@
+window_sizes 1920 1018 208 1706 720 82
+show_stereotypes
+selected class_ref 134530 // FlashItem
+open
+  usecaseview_ref 128002 // Bomberman
+  classview_ref 128006 // Klassendiagramm
+end
+end
