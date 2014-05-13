@@ -1,6 +1,8 @@
 #ifndef COREFIRE_H
 #define COREFIRE_H
 #include "fire.h"
+#include <iostream>
+
 class CoreFire : public Fire
 {
 public:

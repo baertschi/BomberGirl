@@ -27,6 +27,7 @@ void MyTimer::detach(/*Elapsing *observer*/)
     if(elapsingList.empty() == false){
         for(it = iStart; it != iEnd; it++){
             (*it)->onBurn();
+            //    static_cast<Ground *>(map[x][y])->bombElement = NULL;
         }
 
         elapsingList.clear();

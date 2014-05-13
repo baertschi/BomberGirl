@@ -61,12 +61,18 @@ void MainWindow::paintEvent(QPaintEvent *)
             // draw item if there is any
             if(thePlayground.map[x][y]->image == groundImage){
                  pnt = static_cast<Ground *>(thePlayground.map[x][y]);
-                  if(pnt->brickElement != NULL){
+                 if(pnt->itemElement != NULL){
+                     painter.drawPixmap(blockSize*x, blockSize*y, blockSize, blockSize, *images[pnt->itemElement->image]);
+                 }
+                 if(pnt->brickElement != NULL){
                      painter.drawPixmap(blockSize*x, blockSize*y, blockSize, blockSize, *images[brickImage]);
 
                   }
                   if(pnt->bombElement != NULL){
                       painter.drawPixmap(blockSize*x, blockSize*y, blockSize, blockSize, *images[bombImage]);
+                  }
+                  if(pnt->fireElement != NULL){
+                      painter.drawPixmap(blockSize*x, blockSize*y, blockSize, blockSize, *images[pnt->fireElement->image]);
                   }
             }
 

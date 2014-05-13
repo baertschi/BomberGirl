@@ -63,11 +63,12 @@ void Player::walk(directionEnum dir, const mapMatrix &map)
     }
 }
 
-void Player::placeBomb(mapMatrix &map)
+void Player::placeBomb(const mapMatrix &map)
 {
     // if the player still has bomb to place
     if(bombCounter < maxBomb)
     {
+        std::cout << "place bomb\n" << std::endl;
         bombCounter++;
         static_cast<Ground *>(map[x][y])->bombElement = new Bomb(fireSize, &bombCounter, tmr, map);
 

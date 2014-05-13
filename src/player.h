@@ -20,7 +20,7 @@ public:
 
     void die();
     void walk(directionEnum dir, const mapMatrix &map);
-    void placeBomb(mapMatrix &map);
+    void placeBomb(const mapMatrix &map);
 
     int x, y;
     imageEnum image;
