@@ -37,7 +37,20 @@ Ground::Ground(int _x, int _y, Brick *_theBrick){
 
 onStepArgument Ground::onStep(){
     // first execute onStep Method of fieldContents (highest priority first)
-
+    if(brickElement != NULL || bombElement != NULL){
+        return NOENTRY;
+    }
+    else if(fireElement != NULL){
+        return DIE;
+    }
+    else if(itemElement != NULL){
+        if(itemElement->image == flashItemImage){
+            return UPGRADEFLASH;
+        }
+        else{
+            return UPGRADEBOMBS;
+        }
+    }
     return ENTRY;
 }
 onBurnArgument Ground::onBurn(){

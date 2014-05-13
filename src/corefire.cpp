@@ -3,3 +3,15 @@
 CoreFire::CoreFire()
 {
 }
+CoreFire::CoreFire(int _x, int _y)
+{
+    x = _x;
+    y = _y;
+    image = coreFireImage;
+}
+onBurnArgument CoreFire::onBurn(){
+    return NOACTION;
+}
+onStepArgument CoreFire::onStep(){
+    return DIE;
+}

@@ -15,7 +15,7 @@ Playground::Playground()
 
     for(int i = 1; i < 13; i+=2){
         for(int j = 1; j < 11; j +=2){
-           map[i][j] = new Wall(i, j);     // not sure whether *map =... or map = ... is correct
+           map[i][j] = new Wall(i, j);
         }
     }
 
@@ -65,6 +65,8 @@ Playground::Playground()
            }
         }
     }
+
+
 
     // Initialize the two players
     player1.image = player1Image;

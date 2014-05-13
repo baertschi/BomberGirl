@@ -55,17 +55,20 @@ void MainWindow::paintEvent(QPaintEvent *)
             // ground zeichnen, player zeichnen, brick zeichnen
             // draw groudn field
 
-
             painter.drawPixmap(blockSize*x, blockSize*y, blockSize, blockSize, *images[thePlayground.map[x][y]->image]);
 
-            // draw item if there is any
-//            if(thePlayground.map[x][y]->image == groundImage){
-//                 pnt = static_cast<Ground *>(thePlayground.map[x][y]);
-//                  if(pnt->brickElement != NULL){
-//                     painter.drawPixmap(blockSize*x, blockSize*y, blockSize, blockSize, *images[brickImage]);
 
-//                  }
-//            }
+            // draw item if there is any
+            if(thePlayground.map[x][y]->image == groundImage){
+                 pnt = static_cast<Ground *>(thePlayground.map[x][y]);
+                  if(pnt->brickElement != NULL){
+                     painter.drawPixmap(blockSize*x, blockSize*y, blockSize, blockSize, *images[brickImage]);
+
+                  }
+                  if(pnt->bombElement != NULL){
+                      painter.drawPixmap(blockSize*x, blockSize*y, blockSize, blockSize, *images[bombImage]);
+                  }
+            }
 
 
         }

@@ -22,10 +22,10 @@ public:
     onBurnArgument onBurn();
     void placeBomb();
 
-    Item *itemElement;
-    Fire *fireElement;
-    Bomb *bombElement;
-    Brick *brickElement;
+    Item *itemElement = NULL;
+    Fire *fireElement = NULL;
+    Bomb *bombElement = NULL;
+    Brick *brickElement = NULL;
 };
 
 #endif // GROUND_H

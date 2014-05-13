@@ -19,7 +19,8 @@ onBurnArgument Bomb::onBurn(){
     // TODO: trigger bomb immediately!
     *pBombCounter = *pBombCounter - 1;
     static_cast<Ground *>(map[x][y])->bombElement = NULL;
-
-    std::cout << "\nonburn\n";
+    std::cout << "onburn vor corefire"<< std::endl;
+    static_cast<Ground *>(map[x][y])->fireElement = new CoreFire(x, y);
+    std::cout << "\nonburn\n"<< std::endl;
     return TRIGGER;
 }

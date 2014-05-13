@@ -3,6 +3,9 @@
 #include <vector>
 #include "elapsing.h"
 #include "mytimer.h"
+#include "corefire.h"
+#include "extensionfire.h"
+#include "endfire.h"
 
 typedef std::vector< std::vector< Field* > > mapMatrix;
 
