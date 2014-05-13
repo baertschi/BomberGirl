@@ -8,5 +8,8 @@
         <file alias="player2.png">img/player2.png</file>
         <file alias="bombItem.png">img/bombItem.png</file>
         <file alias="flashItem.png">img/flashItem.png</file>
+        <file alias="coreFire.png">img/coreFire.png</file>
+        <file  alias="endFire.png">img/endFire.png</file>
+        <file  alias="extensionFire.png">img/extensionFire.png</file>
     </qresource>
 </RCC>

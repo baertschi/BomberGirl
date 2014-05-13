@@ -19,19 +19,10 @@ MainWindow::MainWindow()
 
     images[bombItemImage] = new QPixmap(":/bombItem.png");
     images[flashItemImage] = new QPixmap(":/flashItem.png");
-/*
+
     images[coreFireImage] = new QPixmap(":/coreFire.png");
     images[extensionFireImage ] = new QPixmap(":/extensionFire.png");
     images[endFireImage] = new QPixmap(":/endFire.png");
-    */
-    ////////////////////////////////////////////////////////////////////////
-    // For Debuging - no images created yet
-    ////////////////////////////////////////////////////////////////////////
-
-    images[coreFireImage] = new QPixmap(":/brick.png");
-    images[extensionFireImage ] = new QPixmap(":/brick.png");
-    images[endFireImage] = new QPixmap(":/brick.png");
-    ////////////////////////////////////////////////////////////////////////
 
     images[player1Image] = new QPixmap(":/player1.png");
     images[player2Image] = new QPixmap(":/player2.png");
