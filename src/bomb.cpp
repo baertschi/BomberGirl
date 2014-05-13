@@ -24,10 +24,11 @@
  * @date 15 Mai 2014
  * @brief File Containing bomb class implementation.
  *
- * Here typically goes a more extensive explanation of what the header
- * defines. Doxygens tags are words preceeded by either a backslash @\
- * or by an at symbol @@.
- * @see https://github.com/baertschi/BomberGirl
+ * Bomb explode after a certain time and handles the fire. One can not
+ * step on a bomb.
+ *
+ * @see https://github.com/baertschi/BomberGirl or
+ * @see http://baertschi.github.io/BomberGirl/
 
  */
 Bomb::Bomb(int _fireSize, int *_pBombCounter, MyTimer* timer, const mapMatrix &_map)
