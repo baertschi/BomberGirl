@@ -1,5 +1,31 @@
 #include "player.h"
 
+/****************************************************************************
+ * Copyright (C) 2014 by bartm9                                             *
+ *                                                                          *
+ * This file is part of BomberGirl.                                         *
+ *                                                                          *
+ ****************************************************************************/
+
+/**
+ * @file player.cpp
+ * @author bartm9
+ * @date 15 Mai 2014
+ * @brief File containing player class implementation
+ *
+ * The is independent from the rest of the map and is not a child of field
+ *
+ * @see https://github.com/baertschi/BomberGirl or
+ * @see http://baertschi.github.io/BomberGirl/
+
+ */
+
+
+/** *************************************************************************
+ * Constructor:     player                                                  *
+ ****************************************************************************
+ * Initialize the bombsize, firesize and number of bombs of the Player
+  ****************************************************************************/
 Player::Player()
 {
     bombCounter = 0;
@@ -7,6 +33,15 @@ Player::Player()
     fireSize = 3;
 }
 
+/** *************************************************************************
+ * Method:     walk                                                         *
+ ****************************************************************************
+ * Is executet after a KeyEvent and handles the logic for moving the player
+ * on the playground
+ *
+ * @param   dir     Emumeration for the direction (UP, DOWN, LEFT, RIGHT)
+ * @param   &map    Address of the map -> needed for onStep method call
+  ****************************************************************************/
 void Player::walk(directionEnum dir, const mapMatrix &map)
 {
     // handle different walking directions
@@ -63,6 +98,13 @@ void Player::walk(directionEnum dir, const mapMatrix &map)
     }
 }
 
+/** *************************************************************************
+ * Method:     placeBomb                                                    *
+ ****************************************************************************
+ * If a player drops a bomb a new Bomb needs to be created
+ *
+ * @param   &map    Address of the map -> needed to place the Bomb
+  ****************************************************************************/
 void Player::placeBomb(const mapMatrix &map)
 {
     // if the player still has bomb to place

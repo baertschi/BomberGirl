@@ -1,6 +1,33 @@
 #include "playground.h"
 #include <QTime>
 
+/****************************************************************************
+ * Copyright (C) 2014 by bartm9                                             *
+ *                                                                          *
+ * This file is part of BomberGirl.                                         *
+ *                                                                          *
+ ****************************************************************************/
+
+/**
+ * @file playgroud.cpp
+ * @author bartm9
+ * @date 15 Mai 2014
+ * @brief File containing playground class implementation
+ *
+ * The playground contains the map, the players and the timer.
+ * The Playground is initialized randomly with items and bricks
+ *
+ * @see https://github.com/baertschi/BomberGirl or
+ * @see http://baertschi.github.io/BomberGirl/
+
+ */
+
+
+/** *************************************************************************
+ * Constructor:     playgroudn                                              *
+ ****************************************************************************
+ * Initialize the map with Groundfields, Bricks, Walls and Items
+  ****************************************************************************/
 Playground::Playground()
 {
     // With normal C-style array, the map isn't automatically
