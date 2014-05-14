@@ -1,6 +1,35 @@
 #include "mainwindow.h"
 #include <iostream>
 
+
+/****************************************************************************
+ * Copyright (C) 2014 by bartm9                                             *
+ *                                                                          *
+ * This file is part of BomberGirl.                                         *
+ *                                                                          *
+ ****************************************************************************/
+
+/**
+ * @file mainwindow.cpp
+ * @author bartm9
+ * @date 15 Mai 2014
+ * @brief File Containing mainwindow class implementation
+ *
+ * This class handles the main part of our game. It loads and updates
+ * the graphics and handles KeyEvents
+ *
+ * @see https://github.com/baertschi/BomberGirl or
+ * @see http://baertschi.github.io/BomberGirl/
+
+ */
+
+
+/** *************************************************************************
+ * Constructor:     MainWindow                                              *
+ ****************************************************************************
+ * Initializes the Graphic-Window, enable KeyEvents and load all Images
+  ****************************************************************************/
+
 MainWindow::MainWindow()
 {
     // Initialize window
@@ -32,6 +61,12 @@ MainWindow::MainWindow()
 
 }
 
+/** *************************************************************************
+ * Method:     paintEvent                                                   *
+ ****************************************************************************
+ * Draws the map. If multiple Objects are on the same field, it's necessary
+ * to draw the right order
+  ****************************************************************************/
 void MainWindow::paintEvent(QPaintEvent *)
 {
     QPainter painter(this);
@@ -81,6 +116,11 @@ void MainWindow::paintEvent(QPaintEvent *)
     // todo
 }
 
+/** *************************************************************************
+ * Method:     resizeEvent                                                  *
+ ****************************************************************************
+ * Draws the Window in correct ratio
+  ****************************************************************************/
 void MainWindow::resizeEvent(QResizeEvent *event)
 {
     // gets called every time the window is resized.
@@ -94,11 +134,23 @@ void MainWindow::resizeEvent(QResizeEvent *event)
         resize(blockSize*13, blockSize*11);
     }
 }
+
+/** *************************************************************************
+ * Method:     keyReleaseEvent                                              *
+ ****************************************************************************
+ * Optional Method for Issue #4 (https://github.com/baertschi/BomberGirl/issues/4)
+  ****************************************************************************/
 /*void MainWindow::keyReleaseEvent(QKeyEvent *event)
 {
     std::cout << "released: " << event->text().toStdString() << std::endl;
 }*/
 
+/** *************************************************************************
+ * Method:     keyPressEvent                                                *
+ ****************************************************************************
+ * Handles the KeyEvents. For player 1 relevant keys are: wasd and tab
+ * For player 2: arrow_up, arrow_down, arrow_left, arrow_right and "."
+  ****************************************************************************/
 void MainWindow::keyPressEvent(QKeyEvent *event)
 {
     //std::cout << "Key: " << event->text().toStdString() << std::endl;
