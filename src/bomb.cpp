@@ -38,7 +38,7 @@
  * attach itself to the elapsingList
  * @param[in]   &_map   Address of of the map, to place the fireElements
   ****************************************************************************/
-Bomb::Bomb(int _fireSize, int *_pBombCounter, MyTimer* timer, const mapMatrix &_map)
+Bomb::Bomb(int _fireSize, int *_pBombCounter, MyTimer* timer, mapMatrix *_map)
 {
     fireSize = _fireSize;
     pBombCounter = _pBombCounter;
@@ -73,14 +73,14 @@ onStepArgument Bomb::onStep(){
   ****************************************************************************/
 onBurnArgument Bomb::onBurn(){
     // TODO: trigger bomb immediately!
-    std::cout << " onburn vor corefire"<< std::endl;
+
     *pBombCounter = *pBombCounter - 1;
     std::cout << " onburn vor corefire"<< std::endl;
-    static_cast<Ground *>(map[x][y])->fireElement = new CoreFire(x, y);
-    std::cout << "\n onburn\n"<< std::endl;
-    //static_cast<Ground *>(map[x][y])->bombElement = NULL;
+    //static_cast<Ground *>((*map)[x][y])->fireElement = new CoreFire(x, y);
+    std::cout << "\n onburn: \n"<< std::endl;
+    //static_cast<Ground *>((*map)[x][y])->bombElement = NULL;
 
-    std::cout << " onburn vor corefire"<< std::endl;
+    std::cout << " onburn end "<< std::endl;
 
     return TRIGGER;
 }

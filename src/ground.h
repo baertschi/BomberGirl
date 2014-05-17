@@ -1,7 +1,6 @@
 #ifndef GROUND_H
 #define GROUND_H
 #include "field.h"
-#include "fieldcontent.h"
 #include "bombitem.h"
 #include "bomb.h"
 #include "flashitem.h"

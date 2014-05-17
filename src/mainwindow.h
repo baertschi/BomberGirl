@@ -7,7 +7,7 @@
 #include <QWidget>
 #include <QResizeEvent>
 #include "playground.h"
-#include "mytimer.h"
+
 
 #define DEFAULT_BLOCK_SIZE 48
 #define MINIMUM_BLOCK_SIZE 16

@@ -2,12 +2,10 @@
 #define PLAYGROUND_H
 
 #include <vector>
-#include "field.h"
 #include "wall.h"
-#include "ground.h"
+//#include "ground.h"
 #include "player.h"
 #include "bombitem.h"
-#include "bomb.h"
 #include "flashitem.h"
 #include "brick.h"
 

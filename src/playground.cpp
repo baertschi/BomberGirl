@@ -35,7 +35,7 @@ Playground::Playground()
     // STL vector class for this (initialization given as last argument).
     map = mapMatrix ( 13, std::vector<Field*> ( 11, (Field*)NULL ) );
 
-    tick = new MyTimer();
+    tick = new MyTimer(0, &map);
 
 
     // Initialize map with walls (position [0, 0] is set to top left corner)

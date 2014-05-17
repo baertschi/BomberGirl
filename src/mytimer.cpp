@@ -28,9 +28,10 @@
  * Initialize the tick to 100ms
   ****************************************************************************/
 
-MyTimer::MyTimer(QObject *parent) :
+MyTimer::MyTimer(QObject *parent, mapMatrix *_map) :
     QTimer(parent)
 {
+    map = _map;
     connect(this, SIGNAL(timeout()), this, SLOT(masterTick()));
     start(100);
 
@@ -76,8 +77,11 @@ void MyTimer::detach(/*Elapsing *observer*/)
     std::list<Elapsing *>::iterator iEnd = elapsingList.end();
     if(elapsingList.empty() == false){
         for(it = iStart; it != iEnd; it++){
+
             (*it)->onBurn();
-            //    static_cast<Ground *>(map[x][y])->bombElement = NULL;
+            //static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->bombElement = NULL;
+
+            //
         }
 
         elapsingList.clear();
