@@ -16,7 +16,7 @@ private:
     int *pBombCounter;
     mapMatrix *map;
 public:
-    Bomb(int _fireSize, int *_pBombCounter, MyTimer* timer, mapMatrix *_map);
+    Bomb(int _x, int _y, int _fireSize, int *_pBombCounter, MyTimer* timer, mapMatrix *_map);
     onStepArgument onStep();
     onBurnArgument onBurn();
 };

@@ -112,7 +112,7 @@ void Player::placeBomb(mapMatrix &map)
     {
         std::cout << "place bomb\n" << std::endl;
         bombCounter++;
-        static_cast<Ground *>(map[x][y])->bombElement = new Bomb(fireSize, &bombCounter, tmr, &map);
+        static_cast<Ground *>(map[x][y])->bombElement = new Bomb(x, y, fireSize, &bombCounter, tmr, &map);
 
     }
 }
