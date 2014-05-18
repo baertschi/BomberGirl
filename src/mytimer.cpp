@@ -63,6 +63,7 @@ void MyTimer::masterTick()
                     int i = 0;
                     bool blocked = false;
                     // TODO: Place Fire in all directions, add all fireelements to elapsing list
+
                     for(i = 1; i < static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->bombElement->fireSize; i++){
                         int newX = (*it)->x;
                         int newY = (*it)->y + i;

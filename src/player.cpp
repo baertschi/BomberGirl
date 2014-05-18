@@ -81,6 +81,7 @@ void Player::walk(directionEnum dir, const mapMatrix &map)
             fireSize++;
             x = newX;
             y = newY;
+            std::cout << "upgrade flash\n" << std::endl;
             break;
         case UPGRADEBOMBS:
             maxBomb++;
