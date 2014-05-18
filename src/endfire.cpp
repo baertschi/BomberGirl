@@ -29,10 +29,12 @@
  *
  * @param[in] x, y  Field coordinate of the EndFire
   ****************************************************************************/
-EndFire::EndFire(int _x, int _y, orientation ori)
+EndFire::EndFire(int _x, int _y, MyTimer* timer, orientation ori)
 {
     x = _x;
     y = _y;
+    countdown = 20;
+    timer->attach(this);
     switch(ori){
     case L:
         image = endFireImage_l;

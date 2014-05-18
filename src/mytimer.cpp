@@ -55,186 +55,194 @@ void MyTimer::masterTick()
         std::list<Elapsing *>::iterator iEnd = elapsingList.end();
         if(elapsingList.empty() == false){
             for(it = iStart; it != iEnd; it++){
-                if((*it)->countdown == 0 ){
-                    (*it)->onBurn();
-                    std::cout << "\n elapsing coordinates: "<< (*it)->x <<" "<< (*it)->y <<std::endl;
-                    static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->fireElement = new CoreFire((*it)->x, (*it)->y);
+                if((*it)->countdown == 0){
+                    if((*it)->image == bombImage){
+                        (*it)->onBurn();
+                        std::cout << "\n elapsing coordinates: "<< (*it)->x <<" "<< (*it)->y <<std::endl;
+                        static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->fireElement = new CoreFire((*it)->x, (*it)->y, this);
 
-                    int i = 0;
-                    bool blocked = false;
-                    // TODO: Place Fire in all directions, add all fireelements to elapsing list
+                        int i = 0;
+                        bool blocked = false;
+                        // TODO: Place Fire in all directions, add all fireelements to elapsing list
 
-                    for(i = 1; i < static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->bombElement->fireSize; i++){
-                        int newX = (*it)->x;
-                        int newY = (*it)->y + i;
+                        for(i = 1; i < static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->bombElement->fireSize; i++){
+                            int newX = (*it)->x;
+                            int newY = (*it)->y + i;
 
-                        // try to expand fire in all direction
-                        onBurnArgument burnResult;
-                        if(newX >= 0 && newX <= 12 && newY >= 0 && newY <= 10)
-                        {
-                            burnResult = static_cast<Ground *>((*map)[newX][newY])->onBurn();
+                            // try to expand fire in all direction
+                            onBurnArgument burnResult;
+                            if(newX >= 0 && newX <= 12 && newY >= 0 && newY <= 10)
+                            {
+                                burnResult = static_cast<Ground *>((*map)[newX][newY])->onBurn();
 
-                            if(blocked == false){
-                                switch(burnResult)
-                                {
-                                case NOACTION:
-                                    if(static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->bombElement->fireSize == i + 1){
-                                        static_cast<Ground *>((*map)[newX][newY])->fireElement = new EndFire(newX, newY, D);
+                                if(blocked == false){
+                                    switch(burnResult)
+                                    {
+                                    case NOACTION:
+                                        if(static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->bombElement->fireSize == i + 1){
+                                            static_cast<Ground *>((*map)[newX][newY])->fireElement = new EndFire(newX, newY, this, D);
+                                        }
+                                        else{
+                                            static_cast<Ground *>((*map)[newX][newY])->fireElement = new ExtensionFire(newX, newY, D);
+                                        }
+                                        break;
+                                    case HARDBLOCK:
+                                    // TODO: Stop iteration of i, so the next field after the wall don't burn
+                                        blocked = true;
+                                        break;
+                                    case BLOCK:
+                                        // TODO: If a field returns Block, stop the fire from expanding.
+                                        static_cast<Ground *>((*map)[newX][newY])->fireElement = new EndFire(newX, newY,this, D);
+                                        delete static_cast<Ground *>((*map)[newX][newY])->brickElement;
+                                        static_cast<Ground *>((*map)[newX][newY])->brickElement = NULL;
+                                        blocked = true;
+
+                                        break;
+                                    case TRIGGER:
+
+                                        break;
+
                                     }
-                                    else{
-                                        static_cast<Ground *>((*map)[newX][newY])->fireElement = new ExtensionFire(newX, newY, D);
-                                    }
-                                    break;
-                                case HARDBLOCK:
-                                // TODO: Stop iteration of i, so the next field after the wall don't burn
-                                    blocked = true;
-                                    break;
-                                case BLOCK:
-                                    // TODO: If a field returns Block, stop the fire from expanding.
-                                    static_cast<Ground *>((*map)[newX][newY])->fireElement = new EndFire(newX, newY, D);
-                                    delete static_cast<Ground *>((*map)[newX][newY])->brickElement;
-                                    static_cast<Ground *>((*map)[newX][newY])->brickElement = NULL;
-                                    blocked = true;
-
-                                    break;
-                                case TRIGGER:
-
-                                    break;
-
                                 }
                             }
                         }
-                    }
-                    // UP
-                    blocked = false;
-                    // TODO: Place Fire in all directions, add all fireelements to elapsing list
-                    for(i = 1; i < static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->bombElement->fireSize; i++){
-                        int newX = (*it)->x;
-                        int newY = (*it)->y - i;
+                        // UP
+                        blocked = false;
+                        // TODO: Place Fire in all directions, add all fireelements to elapsing list
+                        for(i = 1; i < static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->bombElement->fireSize; i++){
+                            int newX = (*it)->x;
+                            int newY = (*it)->y - i;
 
-                        // try to expand fire in all direction
-                        onBurnArgument burnResult;
-                        if(newX >= 0 && newX <= 12 && newY >= 0 && newY <= 10)
-                        {
-                            burnResult = static_cast<Ground *>((*map)[newX][newY])->onBurn();
+                            // try to expand fire in all direction
+                            onBurnArgument burnResult;
+                            if(newX >= 0 && newX <= 12 && newY >= 0 && newY <= 10)
+                            {
+                                burnResult = static_cast<Ground *>((*map)[newX][newY])->onBurn();
 
-                            if(blocked == false){
-                                switch(burnResult)
-                                {
-                                case NOACTION:
-                                    if(static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->bombElement->fireSize == i + 1){
-                                        static_cast<Ground *>((*map)[newX][newY])->fireElement = new EndFire(newX, newY, U);
+                                if(blocked == false){
+                                    switch(burnResult)
+                                    {
+                                    case NOACTION:
+                                        if(static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->bombElement->fireSize == i + 1){
+                                            static_cast<Ground *>((*map)[newX][newY])->fireElement = new EndFire(newX, newY,this, U);
+                                        }
+                                        else{
+                                            static_cast<Ground *>((*map)[newX][newY])->fireElement = new ExtensionFire(newX, newY, U);
+                                        }
+                                        break;
+                                    case HARDBLOCK:
+                                        blocked = true;
+                                        break;
+                                    case BLOCK:
+                                        static_cast<Ground *>((*map)[newX][newY])->fireElement = new EndFire(newX, newY, this, U);
+                                        delete static_cast<Ground *>((*map)[newX][newY])->brickElement;
+                                        static_cast<Ground *>((*map)[newX][newY])->brickElement = NULL;
+                                        blocked = true;
+
+                                        break;
+                                    case TRIGGER:
+
+                                        break;
+
                                     }
-                                    else{
-                                        static_cast<Ground *>((*map)[newX][newY])->fireElement = new ExtensionFire(newX, newY, U);
-                                    }
-                                    break;
-                                case HARDBLOCK:
-                                    blocked = true;
-                                    break;
-                                case BLOCK:
-                                    static_cast<Ground *>((*map)[newX][newY])->fireElement = new EndFire(newX, newY, U);
-                                    delete static_cast<Ground *>((*map)[newX][newY])->brickElement;
-                                    static_cast<Ground *>((*map)[newX][newY])->brickElement = NULL;
-                                    blocked = true;
-
-                                    break;
-                                case TRIGGER:
-
-                                    break;
-
                                 }
                             }
                         }
-                    }
-                    // LEFT
-                    blocked = false;
-                    for(i = 1; i < static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->bombElement->fireSize; i++){
-                        int newX = (*it)->x - i;
-                        int newY = (*it)->y;
+                        // LEFT
+                        blocked = false;
+                        for(i = 1; i < static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->bombElement->fireSize; i++){
+                            int newX = (*it)->x - i;
+                            int newY = (*it)->y;
 
-                        // try to expand fire in all direction
-                        onBurnArgument burnResult;
-                        if(newX >= 0 && newX <= 12 && newY >= 0 && newY <= 10)
-                        {
-                            burnResult = static_cast<Ground *>((*map)[newX][newY])->onBurn();
+                            // try to expand fire in all direction
+                            onBurnArgument burnResult;
+                            if(newX >= 0 && newX <= 12 && newY >= 0 && newY <= 10)
+                            {
+                                burnResult = static_cast<Ground *>((*map)[newX][newY])->onBurn();
 
-                            if(blocked == false){
-                                switch(burnResult)
-                                {
-                                case NOACTION:
-                                    if(static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->bombElement->fireSize == i + 1){
-                                        static_cast<Ground *>((*map)[newX][newY])->fireElement = new EndFire(newX, newY, L);
-                                    }
-                                    else{
-                                        static_cast<Ground *>((*map)[newX][newY])->fireElement = new ExtensionFire(newX, newY, L);
-                                    }
-                                    break;
-                                case HARDBLOCK:
-                                blocked = true;
-                                    break;
-                                case BLOCK:
-                                    static_cast<Ground *>((*map)[newX][newY])->fireElement = new EndFire(newX, newY, L);
-                                    delete static_cast<Ground *>((*map)[newX][newY])->brickElement;
-                                    static_cast<Ground *>((*map)[newX][newY])->brickElement = NULL;
+                                if(blocked == false){
+                                    switch(burnResult)
+                                    {
+                                    case NOACTION:
+                                        if(static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->bombElement->fireSize == i + 1){
+                                            static_cast<Ground *>((*map)[newX][newY])->fireElement = new EndFire(newX, newY,this, L);
+                                        }
+                                        else{
+                                            static_cast<Ground *>((*map)[newX][newY])->fireElement = new ExtensionFire(newX, newY, L);
+                                        }
+                                        break;
+                                    case HARDBLOCK:
                                     blocked = true;
+                                        break;
+                                    case BLOCK:
+                                        static_cast<Ground *>((*map)[newX][newY])->fireElement = new EndFire(newX, newY, this, L);
+                                        delete static_cast<Ground *>((*map)[newX][newY])->brickElement;
+                                        static_cast<Ground *>((*map)[newX][newY])->brickElement = NULL;
+                                        blocked = true;
 
-                                    break;
-                                case TRIGGER:
+                                        break;
+                                    case TRIGGER:
 
-                                    break;
+                                        break;
 
+                                    }
                                 }
                             }
                         }
-                    }
-                    // RIGHT
-                    blocked = false;
-                    for(i = 1; i < static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->bombElement->fireSize; i++){
-                        int newX = (*it)->x + i;
-                        int newY = (*it)->y;
+                        // RIGHT
+                        blocked = false;
+                        for(i = 1; i < static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->bombElement->fireSize; i++){
+                            int newX = (*it)->x + i;
+                            int newY = (*it)->y;
 
-                        // try to expand fire in all direction
-                        onBurnArgument burnResult;
-                        if(newX >= 0 && newX <= 12 && newY >= 0 && newY <= 10)
-                        {
-                            burnResult = static_cast<Ground *>((*map)[newX][newY])->onBurn();
+                            // try to expand fire in all direction
+                            onBurnArgument burnResult;
+                            if(newX >= 0 && newX <= 12 && newY >= 0 && newY <= 10)
+                            {
+                                burnResult = static_cast<Ground *>((*map)[newX][newY])->onBurn();
 
-                            if(blocked == false){
-                                switch(burnResult)
-                                {
-                                case NOACTION:
-                                    if(static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->bombElement->fireSize == i + 1){
-                                        static_cast<Ground *>((*map)[newX][newY])->fireElement = new EndFire(newX, newY, R);
+                                if(blocked == false){
+                                    switch(burnResult)
+                                    {
+                                    case NOACTION:
+                                        if(static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->bombElement->fireSize == i + 1){
+                                            static_cast<Ground *>((*map)[newX][newY])->fireElement = new EndFire(newX, newY,this, R);
+                                        }
+                                        else{
+                                            static_cast<Ground *>((*map)[newX][newY])->fireElement = new ExtensionFire(newX, newY, R);
+                                        }
+                                        break;
+                                    case HARDBLOCK:
+                                        blocked = true;
+                                        break;
+                                    case BLOCK:
+                                        static_cast<Ground *>((*map)[newX][newY])->fireElement = new EndFire(newX, newY,this, R);
+                                        delete static_cast<Ground *>((*map)[newX][newY])->brickElement;
+                                        static_cast<Ground *>((*map)[newX][newY])->brickElement = NULL;
+                                        blocked = true;
+
+                                        break;
+                                    case TRIGGER:
+
+                                        break;
+
                                     }
-                                    else{
-                                        static_cast<Ground *>((*map)[newX][newY])->fireElement = new ExtensionFire(newX, newY, R);
-                                    }
-                                    break;
-                                case HARDBLOCK:
-                                    blocked = true;
-                                    break;
-                                case BLOCK:
-                                    static_cast<Ground *>((*map)[newX][newY])->fireElement = new EndFire(newX, newY, R);
-                                    delete static_cast<Ground *>((*map)[newX][newY])->brickElement;
-                                    static_cast<Ground *>((*map)[newX][newY])->brickElement = NULL;
-                                    blocked = true;
-
-                                    break;
-                                case TRIGGER:
-
-                                    break;
-
                                 }
                             }
                         }
+                        // Delete Bomb from elapsinglist
+                        detach(*it);
+                        // delete Bomb-object (not sure which line is correct, but it works somehow *magic*)
+                        delete static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->bombElement;
+                        static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->bombElement = NULL;
+                        //elapsingList.clear();
                     }
-                    // Delete Bomb from elapsinglist
-                    detach(*it);
-                    // delete Bomb-object (not sure which line is correct, but it works somehow *magic*)
-                    delete static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->bombElement;
-                    static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->bombElement = NULL;
-                    elapsingList.clear();
+                    else{
+                        detach(*it);
+                        // delete Bomb-object (not sure which line is correct, but it works somehow *magic*)
+                        delete static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->fireElement;
+                        static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->fireElement = NULL;
+                    }
                 }
                 else{
                     (*it)->countdown--;

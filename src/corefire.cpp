@@ -30,11 +30,13 @@
  *
  * @param[in] x, y  Field coordinate of the Bombitem
   ****************************************************************************/
-CoreFire::CoreFire(int _x, int _y)
+CoreFire::CoreFire(int _x, int _y, MyTimer* timer)
 {
     x = _x;
     y = _y;
     image = coreFireImage;
+    countdown = 20;
+    timer->attach(this);
     std::cout << "corefire created"<< std::endl;
 }
 
