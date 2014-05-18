@@ -27,7 +27,7 @@ protected:
 //     void keyReleaseEvent(QKeyEvent *event);
 
 private:
-     QPixmap* images[11];
+     QPixmap* images[17];
 
      int blockSize;
 

@@ -81,8 +81,36 @@ void MyTimer::detach(/*Elapsing *observer*/)
             (*it)->onBurn();
             std::cout << "\n elapsing coordinates: "<< (*it)->x <<" "<< (*it)->y <<std::endl;
             static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->fireElement = new CoreFire((*it)->x, (*it)->y);
+
+            int newX = (*it)->x;
+            int newY = (*it)->y - 1;
+
+            // try to expand fire in all direction
+            onBurnArgument burnResult;
+            if(newX >= 0 && newX <= 12 && newY >= 0 && newY <= 10)
+            {
+                burnResult = static_cast<Ground *>((*map)[newX][newY])->onBurn();
+
+                switch(burnResult)
+                {
+                case NOACTION:
+                    static_cast<Ground *>((*map)[newX][newY])->fireElement = new ExtensionFire(newX, newY);
+                    break;
+                case HARDBLOCK:
+
+                    break;
+                case BLOCK:
+
+                    break;
+                case TRIGGER:
+
+                    break;
+
+                }
+            }
+
             static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->bombElement = NULL;
-            //
+
         }
 
         elapsingList.clear();

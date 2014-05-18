@@ -50,8 +50,16 @@ MainWindow::MainWindow()
     images[flashItemImage] = new QPixmap(":/flashItem.png");
 
     images[coreFireImage] = new QPixmap(":/coreFire.png");
-    images[extensionFireImage ] = new QPixmap(":/extensionFire.png");
-    images[endFireImage] = new QPixmap(":/endFire.png");
+
+    images[extensionFireImage_u ] = new QPixmap(":/extensionFire_u.png");
+    images[extensionFireImage_d ] = new QPixmap(":/extensionFire_d.png");
+    images[extensionFireImage_l ] = new QPixmap(":/extensionFire_l.png");
+    images[extensionFireImage_r ] = new QPixmap(":/extensionFire_r.png");
+
+    images[endFireImage_u] = new QPixmap(":/endFire_u.png");
+    images[endFireImage_d] = new QPixmap(":/endFire_d.png");
+    images[endFireImage_l] = new QPixmap(":/endFire_l.png");
+    images[endFireImage_r] = new QPixmap(":/endFire_r.png");
 
     images[player1Image] = new QPixmap(":/player1.png");
     images[player2Image] = new QPixmap(":/player2.png");

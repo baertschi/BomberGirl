@@ -63,8 +63,8 @@ void Player::walk(directionEnum dir, const mapMatrix &map)
     }
 
     // prove if new position is inside the playground
-    if(newX >= 0 && newX <= 12 && newY >= 0 && newY <= 10)
-    {
+        if(newX >= 0 && newX <= 12 && newY >= 0 && newY <= 10)
+        {
         // try to walk in this direction
         onStepArgument walkResult;
         walkResult = map[newX][newY]->onStep();

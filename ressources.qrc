@@ -9,7 +9,13 @@
         <file alias="bombItem.png">img/bombItem.png</file>
         <file alias="flashItem.png">img/flashItem.png</file>
         <file alias="coreFire.png">img/coreFire.png</file>
-        <file  alias="endFire.png">img/endFire.png</file>
-        <file  alias="extensionFire.png">img/extensionFire.png</file>
+        <file alias="endFire_d.png">img/endFire_d.png</file>
+        <file alias="endFire_l.png">img/endFire_l.png</file>
+        <file alias="endFire_r.png">img/endFire_r.png</file>
+        <file alias="endFire_u.png">img/endFire_u.png</file>
+        <file alias="extensionFire_d.png">img/extensionFire_d.png</file>
+        <file alias="extensionFire_l.png">img/extensionFire_l.png</file>
+        <file alias="extensionFire_r.png">img/extensionFire_r.png</file>
+        <file alias="extensionFire_u.png">img/extensionFire_u.png</file>
     </qresource>
 </RCC>

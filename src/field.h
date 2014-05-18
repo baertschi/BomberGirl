@@ -6,7 +6,7 @@
 enum imageEnum {
 groundImage, bombImage, wallImage, brickImage,
 bombItemImage, flashItemImage, coreFireImage,
-extensionFireImage,endFireImage, player1Image, player2Image
+extensionFireImage_l,extensionFireImage_r,extensionFireImage_u,extensionFireImage_d,endFireImage_l,endFireImage_r,endFireImage_u,endFireImage_d, player1Image, player2Image
 };
 
 enum onStepArgument {
