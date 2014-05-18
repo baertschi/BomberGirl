@@ -1,12 +1,13 @@
 #ifndef GROUND_H
 #define GROUND_H
-#include "field.h"
+//#include "field.h"
 #include "bombitem.h"
 #include "bomb.h"
 #include "flashitem.h"
 #include "brick.h"
 #include "fire.h"
 
+class Bomb;
 class Ground : public Field
 {
 private:

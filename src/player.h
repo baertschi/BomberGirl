@@ -1,7 +1,6 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 #include "field.h"
-//#include "bomb.h"
 #include "ground.h"
 #include "mytimer.h"
 

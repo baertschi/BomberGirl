@@ -2,13 +2,13 @@
 #define BOMB_H
 #include <vector>
 #include "mytimer.h"
-#include "corefire.h"
-#include "extensionfire.h"
-#include "endfire.h"
+//#include "corefire.h"
+//#include "extensionfire.h"
+//#include "endfire.h"
 
 typedef std::vector< std::vector< Field* > > mapMatrix;
 
-
+class MyTimer;
 class Bomb : public Elapsing
 {
 private:

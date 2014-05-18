@@ -79,8 +79,9 @@ void MyTimer::detach(/*Elapsing *observer*/)
         for(it = iStart; it != iEnd; it++){
 
             (*it)->onBurn();
-            //static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->bombElement = NULL;
-
+            std::cout << "\n elapsing coordinates: \n"<< (*it)->x <<" "<< (*it)->y <<std::endl;
+            static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->fireElement = new CoreFire((*it)->x, (*it)->y);
+            static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->bombElement = NULL;
             //
         }
 

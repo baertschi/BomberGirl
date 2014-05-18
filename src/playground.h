@@ -3,7 +3,6 @@
 
 #include <vector>
 #include "wall.h"
-//#include "ground.h"
 #include "player.h"
 #include "bombitem.h"
 #include "flashitem.h"

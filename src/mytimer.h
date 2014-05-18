@@ -6,6 +6,8 @@
 #include <list>
 #include "elapsing.h"
 #include "ground.h"
+#include "corefire.h"
+
 
 typedef std::vector< std::vector< Field* > > mapMatrix;
 
