@@ -8,6 +8,7 @@
 #include "flashitem.h"
 #include "brick.h"
 
+
 typedef std::vector< std::vector< Field* > > mapMatrix;
 
 class Playground

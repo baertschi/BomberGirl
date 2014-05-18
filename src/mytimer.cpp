@@ -82,31 +82,37 @@ void MyTimer::detach(/*Elapsing *observer*/)
             std::cout << "\n elapsing coordinates: "<< (*it)->x <<" "<< (*it)->y <<std::endl;
             static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->fireElement = new CoreFire((*it)->x, (*it)->y);
 
-            int newX = (*it)->x;
-            int newY = (*it)->y - 1;
+            int i = 0;
 
-            // try to expand fire in all direction
-            onBurnArgument burnResult;
-            if(newX >= 0 && newX <= 12 && newY >= 0 && newY <= 10)
-            {
-                burnResult = static_cast<Ground *>((*map)[newX][newY])->onBurn();
+            // TODO: Place Fire in all directions, add all fireelements to elapsing list
+            for(i = -2; i < 3; i++){
+                int newX = (*it)->x;
+                int newY = (*it)->y + i;
 
-                switch(burnResult)
+                // try to expand fire in all direction
+                onBurnArgument burnResult;
+                if(newX >= 0 && newX <= 12 && newY >= 0 && newY <= 10)
                 {
-                case NOACTION:
-                    static_cast<Ground *>((*map)[newX][newY])->fireElement = new ExtensionFire(newX, newY);
-                    break;
-                case HARDBLOCK:
+                    burnResult = static_cast<Ground *>((*map)[newX][newY])->onBurn();
 
-                    break;
-                case BLOCK:
-                    static_cast<Ground *>((*map)[newX][newY])->fireElement = new ExtensionFire(newX, newY);
-                    static_cast<Ground *>((*map)[newX][newY])->brickElement = NULL;
-                    break;
-                case TRIGGER:
+                    switch(burnResult)
+                    {
+                    case NOACTION:
+                        static_cast<Ground *>((*map)[newX][newY])->fireElement = new ExtensionFire(newX, newY);
+                        break;
+                    case HARDBLOCK:
+                    // TODO: Stop iteration of i, so the next field after the wall don't burn
+                        break;
+                    case BLOCK:
+                        // TODO: If a field returns Block, stop the fire from expanding.
+                        static_cast<Ground *>((*map)[newX][newY])->fireElement = new ExtensionFire(newX, newY);
+                        static_cast<Ground *>((*map)[newX][newY])->brickElement = NULL;
+                        break;
+                    case TRIGGER:
 
-                    break;
+                        break;
 
+                    }
                 }
             }
 
@@ -115,6 +121,7 @@ void MyTimer::detach(/*Elapsing *observer*/)
         }
 
         elapsingList.clear();
+
     }
 
     //elapsingList.pop_back();
