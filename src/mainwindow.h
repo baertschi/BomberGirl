@@ -7,8 +7,9 @@
 #include <QWidget>
 #include <QResizeEvent>
 #include "playground.h"
+#include "painttimer.h"
 
-
+class PaintTimer;
 #define DEFAULT_BLOCK_SIZE 48
 #define MINIMUM_BLOCK_SIZE 16
 
@@ -30,7 +31,7 @@ private:
      QPixmap* images[17];
 
      int blockSize;
-
+     PaintTimer *paint_tmr;
      Playground thePlayground;
 };
 

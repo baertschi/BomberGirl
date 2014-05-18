@@ -30,7 +30,8 @@ SOURCES += main.cpp\
     corefire.cpp \
     extensionfire.cpp \
     endfire.cpp \
-    mytimer.cpp
+    mytimer.cpp \
+    painttimer.cpp
 
 HEADERS  += mainwindow.h \
     playground.h \
@@ -49,7 +50,8 @@ HEADERS  += mainwindow.h \
     corefire.h \
     extensionfire.h \
     endfire.h \
-    mytimer.h
+    mytimer.h \
+    painttimer.h
 
 FORMS    += mainwindow.ui
 

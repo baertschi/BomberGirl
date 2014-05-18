@@ -64,7 +64,7 @@ MainWindow::MainWindow()
     images[player1Image] = new QPixmap(":/player1.png");
     images[player2Image] = new QPixmap(":/player2.png");
 
-
+    paint_tmr = new PaintTimer(0, this);
 
 
 }
@@ -202,6 +202,7 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
         break;
     }
 
-    repaint();
+    update();
 }
+
 
