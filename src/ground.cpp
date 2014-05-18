@@ -110,6 +110,13 @@ onStepArgument Ground::onStep(){
  * @param[out]  NOACTION Enum which defines all options for the onBurn-method
   ****************************************************************************/
 onBurnArgument Ground::onBurn(){
+    // block, trigger, noaction
+    if(brickElement != NULL){
+        return BLOCK;
+    }
+    if(bombElement != NULL){
+        return TRIGGER;
+    }
     return NOACTION;
 }
 

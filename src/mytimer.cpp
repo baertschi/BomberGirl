@@ -100,7 +100,8 @@ void MyTimer::detach(/*Elapsing *observer*/)
 
                     break;
                 case BLOCK:
-
+                    static_cast<Ground *>((*map)[newX][newY])->fireElement = new ExtensionFire(newX, newY);
+                    static_cast<Ground *>((*map)[newX][newY])->brickElement = NULL;
                     break;
                 case TRIGGER:
 
