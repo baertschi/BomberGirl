@@ -20,6 +20,7 @@ public:
     onStepArgument onStep();
     onBurnArgument onBurn();
     int fireSize;
+
 };
 
 #endif // BOMB_H

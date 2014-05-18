@@ -44,6 +44,7 @@ Bomb::Bomb(int _x, int _y, int _fireSize, int *_pBombCounter, MyTimer* timer, ma
     y = _y;
     fireSize = _fireSize;
     pBombCounter = _pBombCounter;
+    countdown = 20;
     image = bombImage;
     map = _map;
     timer->attach(this);
