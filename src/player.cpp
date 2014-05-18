@@ -13,7 +13,7 @@
  * @date 15 Mai 2014
  * @brief File containing player class implementation
  *
- * The is independent from the rest of the map and is not a child of field
+ * The Player is independent from the rest of the map and is not a child of field
  *
  * @see https://github.com/baertschi/BomberGirl or
  * @see http://baertschi.github.io/BomberGirl/
@@ -89,6 +89,8 @@ void Player::walk(directionEnum dir, const mapMatrix &map)
             break;
         case DIE:
             // TODO: Die function
+            x = newX;
+            y = newY;
             break;
         }
     }

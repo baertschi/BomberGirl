@@ -20,7 +20,7 @@ public:
     explicit MyTimer(QObject *parent = 0, mapMatrix *_map = NULL);
 
     void attach(Elapsing *observer);
-    void detach(/*Elapsing *observer*/);
+    void detach(Elapsing *observer);
 
 private:
     std::list< Elapsing *> elapsingList;
