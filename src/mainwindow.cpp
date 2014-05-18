@@ -102,12 +102,14 @@ void MainWindow::paintEvent(QPaintEvent *)
                      painter.drawPixmap(blockSize*x, blockSize*y, blockSize, blockSize, *images[brickImage]);
 
                   }
+
                   if(pnt->bombElement != NULL){
                       painter.drawPixmap(blockSize*x, blockSize*y, blockSize, blockSize, *images[bombImage]);
                   }
                   if(pnt->fireElement != NULL){
                       painter.drawPixmap(blockSize*x, blockSize*y, blockSize, blockSize, *images[pnt->fireElement->image]);
                   }
+
             }
 
 

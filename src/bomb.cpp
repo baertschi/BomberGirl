@@ -79,7 +79,7 @@ onBurnArgument Bomb::onBurn(){
 
     *pBombCounter = *pBombCounter - 1;
 
-    std::cout << " onburn end "<< std::endl;
+    //std::cout << " onburn end "<< std::endl;
 
     return TRIGGER;
 }

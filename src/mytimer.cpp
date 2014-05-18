@@ -63,7 +63,7 @@ void MyTimer::masterTick()
 
                         int i = 0;
                         bool blocked = false;
-                        // TODO: Place Fire in all directions, add all fireelements to elapsing list
+                        // Place Fire in all directions, add all fireelements to elapsing list
 
                         for(i = 1; i < static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->bombElement->fireSize; i++){
                             int newX = (*it)->x;
@@ -87,11 +87,11 @@ void MyTimer::masterTick()
                                         }
                                         break;
                                     case HARDBLOCK:
-                                    // TODO: Stop iteration of i, so the next field after the wall don't burn
+                                    // Stop iteration of i, so the next field after the wall don't burn
                                         blocked = true;
                                         break;
                                     case BLOCK:
-                                        // TODO: If a field returns Block, stop the fire from expanding.
+                                        // If a field returns Block, stop the fire from expanding.
                                         static_cast<Ground *>((*map)[newX][newY])->fireElement = new EndFire(newX, newY,this, D);
                                         delete static_cast<Ground *>((*map)[newX][newY])->brickElement;
                                         static_cast<Ground *>((*map)[newX][newY])->brickElement = NULL;
@@ -108,7 +108,7 @@ void MyTimer::masterTick()
                         }
                         // UP
                         blocked = false;
-                        // TODO: Place Fire in all directions, add all fireelements to elapsing list
+                        // Place Fire in all directions, add all fireelements to elapsing list
                         for(i = 1; i < static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->bombElement->fireSize; i++){
                             int newX = (*it)->x;
                             int newY = (*it)->y - i;
@@ -241,15 +241,19 @@ void MyTimer::masterTick()
 
                     }
                     else{
+                        int temp_x, temp_y;
+                        temp_x = (*it)->x;
+                        temp_y = (*it)->y;
                         detach(*it);
                         // delete Fire-object (not sure which line is correct, but it works somehow *magic*)
-                        delete static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->fireElement;
-                        static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->fireElement = NULL;
+                        delete static_cast<Ground *>((*map)[temp_x][temp_y])->fireElement;
+                        static_cast<Ground *>((*map)[temp_x][temp_y])->fireElement = NULL;
+                        std::cout << " deleted: "<< std::endl;
                     }
                 }
                 else{
                     (*it)->countdown--;
-                    std::cout << " onburn end "<< (*it)->countdown<< std::endl;
+                    std::cout << " countdown: "<< (*it)->countdown<< std::endl;
                 }
 
 
@@ -281,6 +285,6 @@ void MyTimer::attach(Elapsing *observer)
   ****************************************************************************/
 void MyTimer::detach(Elapsing *observer){
 
-    elapsingList.pop_back();
+    elapsingList.remove(observer);
 
 }

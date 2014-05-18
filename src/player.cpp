@@ -94,6 +94,7 @@ void Player::walk(directionEnum dir, const mapMatrix &map)
             // TODO: Die function
             x = newX;
             y = newY;
+
             break;
         }
     }
