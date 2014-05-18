@@ -58,7 +58,7 @@ void MyTimer::masterTick()
                 if((*it)->countdown == 0){
                     if((*it)->image == bombImage){
                         (*it)->onBurn();
-                        std::cout << "\n elapsing coordinates: "<< (*it)->x <<" "<< (*it)->y <<std::endl;
+                        //std::cout << "\n elapsing coordinates: "<< (*it)->x <<" "<< (*it)->y <<std::endl;
                         static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->fireElement = new CoreFire((*it)->x, (*it)->y, this);
 
                         int i = 0;
@@ -248,12 +248,12 @@ void MyTimer::masterTick()
                         // delete Fire-object (not sure which line is correct, but it works somehow *magic*)
                         delete static_cast<Ground *>((*map)[temp_x][temp_y])->fireElement;
                         static_cast<Ground *>((*map)[temp_x][temp_y])->fireElement = NULL;
-                        std::cout << " deleted: "<< std::endl;
+                        //std::cout << " deleted: "<< std::endl;
                     }
                 }
                 else{
                     (*it)->countdown--;
-                    std::cout << " countdown: "<< (*it)->countdown<< std::endl;
+                    //std::cout << " countdown: "<< (*it)->countdown<< std::endl;
                 }
 
 

@@ -37,7 +37,7 @@ CoreFire::CoreFire(int _x, int _y, MyTimer* timer)
     image = coreFireImage;
     countdown = 20;
     timer->attach(this);
-    std::cout << "corefire created"<< std::endl;
+    //std::cout << "corefire created"<< std::endl;
 }
 
 /** *************************************************************************
