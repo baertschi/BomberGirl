@@ -29,10 +29,12 @@
  *
  * @param[in] x, y  Field coordinate of the extensionfire
   ****************************************************************************/
-ExtensionFire::ExtensionFire(int _x, int _y, orientation ori)
+ExtensionFire::ExtensionFire(int _x, int _y, MyTimer* timer, orientation ori)
 {
     x = _x;
     y = _y;
+    countdown = 20;
+    timer->attach(this);
     switch(ori){
     case L:
         image = extensionFireImage_l;

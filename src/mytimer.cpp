@@ -83,7 +83,7 @@ void MyTimer::masterTick()
                                             static_cast<Ground *>((*map)[newX][newY])->fireElement = new EndFire(newX, newY, this, D);
                                         }
                                         else{
-                                            static_cast<Ground *>((*map)[newX][newY])->fireElement = new ExtensionFire(newX, newY, D);
+                                            static_cast<Ground *>((*map)[newX][newY])->fireElement = new ExtensionFire(newX, newY, this, D);
                                         }
                                         break;
                                     case HARDBLOCK:
@@ -127,7 +127,7 @@ void MyTimer::masterTick()
                                             static_cast<Ground *>((*map)[newX][newY])->fireElement = new EndFire(newX, newY,this, U);
                                         }
                                         else{
-                                            static_cast<Ground *>((*map)[newX][newY])->fireElement = new ExtensionFire(newX, newY, U);
+                                            static_cast<Ground *>((*map)[newX][newY])->fireElement = new ExtensionFire(newX, newY, this, U);
                                         }
                                         break;
                                     case HARDBLOCK:
@@ -168,7 +168,7 @@ void MyTimer::masterTick()
                                             static_cast<Ground *>((*map)[newX][newY])->fireElement = new EndFire(newX, newY,this, L);
                                         }
                                         else{
-                                            static_cast<Ground *>((*map)[newX][newY])->fireElement = new ExtensionFire(newX, newY, L);
+                                            static_cast<Ground *>((*map)[newX][newY])->fireElement = new ExtensionFire(newX, newY, this, L);
                                         }
                                         break;
                                     case HARDBLOCK:
@@ -209,7 +209,7 @@ void MyTimer::masterTick()
                                             static_cast<Ground *>((*map)[newX][newY])->fireElement = new EndFire(newX, newY,this, R);
                                         }
                                         else{
-                                            static_cast<Ground *>((*map)[newX][newY])->fireElement = new ExtensionFire(newX, newY, R);
+                                            static_cast<Ground *>((*map)[newX][newY])->fireElement = new ExtensionFire(newX, newY, this, R);
                                         }
                                         break;
                                     case HARDBLOCK:
@@ -231,15 +231,18 @@ void MyTimer::masterTick()
                             }
                         }
                         // Delete Bomb from elapsinglist
+                        int temp_x, temp_y;
+                        temp_x = (*it)->x;
+                        temp_y = (*it)->y;
                         detach(*it);
-                        // delete Bomb-object (not sure which line is correct, but it works somehow *magic*)
-                        delete static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->bombElement;
-                        static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->bombElement = NULL;
-                        //elapsingList.clear();
+                        // delete Bomb-object (not sure which line is correct)
+                        delete static_cast<Ground *>((*map)[temp_x][temp_y])->bombElement;
+                        static_cast<Ground *>((*map)[temp_x][temp_y])->bombElement = NULL;
+
                     }
                     else{
                         detach(*it);
-                        // delete Bomb-object (not sure which line is correct, but it works somehow *magic*)
+                        // delete Fire-object (not sure which line is correct, but it works somehow *magic*)
                         delete static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->fireElement;
                         static_cast<Ground *>((*map)[(*it)->x][(*it)->y])->fireElement = NULL;
                     }

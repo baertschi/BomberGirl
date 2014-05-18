@@ -81,12 +81,14 @@ void Player::walk(directionEnum dir, const mapMatrix &map)
             fireSize++;
             x = newX;
             y = newY;
+            static_cast<Ground *>(map[newX][newY])->itemElement = NULL;
             std::cout << "upgrade flash\n" << std::endl;
             break;
         case UPGRADEBOMBS:
             maxBomb++;
             x = newX;
             y = newY;
+            static_cast<Ground *>(map[newX][newY])->itemElement = NULL;
             break;
         case DIE:
             // TODO: Die function
@@ -111,7 +113,7 @@ void Player::walk(directionEnum dir, const mapMatrix &map)
 void Player::placeBomb(mapMatrix &map)
 {
     // if the player still has bomb to place
-    if(bombCounter < maxBomb)
+    if(bombCounter < maxBomb && static_cast<Ground *>(map[x][y])->bombElement == NULL)
     {
         std::cout << "place bomb\n" << std::endl;
         bombCounter++;
