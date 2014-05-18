@@ -12,13 +12,14 @@ class MyTimer;
 class Bomb : public Elapsing
 {
 private:
-    int fireSize;
+
     int *pBombCounter;
     mapMatrix *map;
 public:
     Bomb(int _x, int _y, int _fireSize, int *_pBombCounter, MyTimer* timer, mapMatrix *_map);
     onStepArgument onStep();
     onBurnArgument onBurn();
+    int fireSize;
 };
 
 #endif // BOMB_H

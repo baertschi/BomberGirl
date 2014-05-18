@@ -29,11 +29,26 @@
  *
  * @param[in] x, y  Field coordinate of the extensionfire
   ****************************************************************************/
-ExtensionFire::ExtensionFire(int _x, int _y)
+ExtensionFire::ExtensionFire(int _x, int _y, orientation ori)
 {
     x = _x;
     y = _y;
-    image = extensionFireImage_u;
+    switch(ori){
+    case L:
+        image = extensionFireImage_l;
+        break;
+    case R:
+        image = extensionFireImage_r;
+        break;
+    case U:
+        image = extensionFireImage_u;
+        break;
+    case D:
+        image = extensionFireImage_d;
+        break;
+    }
+
+
 }
 
 /** *************************************************************************

@@ -1,11 +1,13 @@
 #ifndef EXTENSIONFIRE_H
 #define EXTENSIONFIRE_H
 #include "fire.h"
+
+
 class ExtensionFire : public Fire
 {
 public:
     ExtensionFire();
-    ExtensionFire(int _x, int _y);
+    ExtensionFire(int _x, int _y, orientation ori);
 
     onStepArgument onStep();
     onBurnArgument onBurn();
